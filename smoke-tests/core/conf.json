@@ -3,7 +3,7 @@
     "source": {
       "includePattern": ".+\\.js(doc|x)?$",
       "include": ["."],
-      "exclude": ["node_modules"]
+      "exclude": ["node_modules", "downloads"]
     },
     "recurseDepth": 10,
     "plugins": ["plugins/markdown"],
