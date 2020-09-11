@@ -17,6 +17,7 @@ node_js:
 before_script: cd smoke-tests/core/
 
 script:
+  - npm install
   - npm run doc 
 
 # Here is the magic part
