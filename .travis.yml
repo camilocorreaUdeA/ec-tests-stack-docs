@@ -11,6 +11,8 @@ notifications:
 cache:
   directories:
     - docs
+    - .cache
+    - node_modules
 sudo: required
 node_js:
   - '12.18'
