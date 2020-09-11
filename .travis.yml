@@ -1,21 +1,12 @@
+# This is the required part containing the build step for jsdoc
 language: node_js
-dist: trusty
-branches:
-  only:
-      - master
-      - demo
-      - test
-
-notifications:
-  email: false
-cache:
-  directories:
-    - smoke-tests/core/docs
-    # - .cache
-    # - node_modules
-sudo: required
 node_js:
-  - '12.18'
+  - '12'
+cache:
+  yarn: true
+  directories:
+    - docs
+    - .cache    
 before_script: cd smoke-tests/core/
 
 script:
