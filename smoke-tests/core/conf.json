@@ -13,6 +13,7 @@
       "template": "",
       "recurse": true,
       "verbose": true,
+      "readme": "../../README.md",
       "theme_opts": {
         "title": "EC Test Stack: Core Library"
       }
