@@ -2,22 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Module: secure - employee/resolvers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>secure - employee/resolvers</title>
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/search.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script> -->
+    <script src="scripts/fuse.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/ionicons.min.css">
     <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
     <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
-</head>
+    <link type="text/css" rel="stylesheet" href="styles/clean-jsdoc-theme.css">
+    
+    
+    
+<svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none">
+    <defs>
+        <symbol id="copy-icon" viewbox="0 0 488.3 488.3">
+            <g>
+                <path d="M314.25,85.4h-227c-21.3,0-38.6,17.3-38.6,38.6v325.7c0,21.3,17.3,38.6,38.6,38.6h227c21.3,0,38.6-17.3,38.6-38.6V124    C352.75,102.7,335.45,85.4,314.25,85.4z M325.75,449.6c0,6.4-5.2,11.6-11.6,11.6h-227c-6.4,0-11.6-5.2-11.6-11.6V124    c0-6.4,5.2-11.6,11.6-11.6h227c6.4,0,11.6,5.2,11.6,11.6V449.6z"/>
+                <path d="M401.05,0h-227c-21.3,0-38.6,17.3-38.6,38.6c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5c0-6.4,5.2-11.6,11.6-11.6h227    c6.4,0,11.6,5.2,11.6,11.6v325.7c0,6.4-5.2,11.6-11.6,11.6c-7.5,0-13.5,6-13.5,13.5s6,13.5,13.5,13.5c21.3,0,38.6-17.3,38.6-38.6    V38.6C439.65,17.3,422.35,0,401.05,0z"/>
+            </g>
+        </symbol>
+    </defs>
+</svg>
 
+</head>
 <body>
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html"><div class="text">EC Test Stack: Core Library</div></a></h2><div class="search-box"><input type="text" placeholder="Search..." id="search-box" /><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-list-div"><h3>Classes</h3><ul><li><a href="Puppeteer.html">Puppeteer</a><ul class='methods'><li data-type='method'><a href="Puppeteer.html#newPage">newPage</a></li></ul></li><li><a href="Smoke.html">Smoke</a><ul class='methods'><li data-type='method'><a href="Smoke.html#executeTest">executeTest</a></li><li data-type='method'><a href="Smoke.html#getTestFolderDetails">getTestFolderDetails</a></li><li data-type='method'><a href="Smoke.html#updateGroupsByEnvironment">updateGroupsByEnvironment</a></li><li data-type='method'><a href="Smoke.html#updateSuiteResultsKeys">updateSuiteResultsKeys</a></li></ul></li><li><a href="TestClient.html">TestClient</a><ul class='methods'><li data-type='method'><a href="TestClient.html#collectMetricsBegin">collectMetricsBegin</a></li><li data-type='method'><a href="TestClient.html#collectMetricsEnd">collectMetricsEnd</a></li><li data-type='method'><a href="TestClient.html#formatResult">formatResult</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-accounts.html">accounts</a><ul class='methods'><li data-type='method'><a href="module-accounts.html#~login">login</a></li><li data-type='method'><a href="module-accounts.html#~loginPage">loginPage</a></li><li data-type='method'><a href="module-accounts.html#~logout">logout</a></li></ul></li><li><a href="module-secure%2520-%2520bulkUploads_resolvers.html">secure - bulkUploads/resolvers</a><ul class='methods'><li data-type='method'><a href="module-secure%252520-%252520bulkUploads_resolvers.html#~downloadAndCheckSummary">downloadAndCheckSummary</a></li></ul></li><li><a href="module-secure%2520-%2520employee_resolvers.html">secure - employee/resolvers</a><ul class='methods'><li data-type='method'><a href="module-secure%252520-%252520employee_resolvers.html#~byIdEmployeeNumber">byIdEmployeeNumber</a></li><li data-type='method'><a href="module-secure%252520-%252520employee_resolvers.html#~byIdEmployeeNumberTop">byIdEmployeeNumberTop</a></li><li data-type='method'><a href="module-secure%252520-%252520employee_resolvers.html#~byLCR">byLCR</a></li><li data-type='method'><a href="module-secure%252520-%252520employee_resolvers.html#~byLCRTop">byLCRTop</a></li><li data-type='method'><a href="module-secure%252520-%252520employee_resolvers.html#~byName">byName</a></li><li data-type='method'><a href="module-secure%252520-%252520employee_resolvers.html#~byNameTop">byNameTop</a></li><li data-type='method'><a href="module-secure%252520-%252520employee_resolvers.html#~checkPositionRequirementSatisfied">checkPositionRequirementSatisfied</a></li><li data-type='method'><a href="module-secure%252520-%252520employee_resolvers.html#~loadPositionRequirements">loadPositionRequirements</a></li></ul></li><li><a href="module-secure%2520-%2520employee_utils.html">secure - employee/utils</a><ul class='methods'><li data-type='method'><a href="module-secure%252520-%252520employee_utils.html#~checkRequestedDataFound">checkRequestedDataFound</a></li><li data-type='method'><a href="module-secure%252520-%252520employee_utils.html#~positionsExist">positionsExist</a></li><li data-type='method'><a href="module-secure%252520-%252520employee_utils.html#~setSelectorEmptyAndTypeInfo">setSelectorEmptyAndTypeInfo</a></li><li data-type='method'><a href="module-secure%252520-%252520employee_utils.html#~waitEmployeeByParams">waitEmployeeByParams</a></li><li data-type='method'><a href="module-secure%252520-%252520employee_utils.html#~waitSelectorTextIsNotEmpty">waitSelectorTextIsNotEmpty</a></li><li data-type='method'><a href="module-secure%252520-%252520employee_utils.html#~waitTitleText">waitTitleText</a></li></ul></li><li><a href="module-secure%2520-%2520licenseVerification_resolvers.html">secure - licenseVerification/resolvers</a><ul class='methods'><li data-type='method'><a href="module-secure%252520-%252520licenseVerification_resolvers.html#~disciplinaryActions">disciplinaryActions</a></li><li data-type='method'><a href="module-secure%252520-%252520licenseVerification_resolvers.html#~nameDiscrepancies">nameDiscrepancies</a></li><li data-type='method'><a href="module-secure%252520-%252520licenseVerification_resolvers.html#~pendingCredentialsReport">pendingCredentialsReport</a></li><li data-type='method'><a href="module-secure%252520-%252520licenseVerification_resolvers.html#~positionRequirementReport">positionRequirementReport</a></li></ul></li><li><a href="module-secure%2520-%2520positionRequirements_resolvers.html">secure - positionRequirements/resolvers</a><ul class='methods'><li data-type='method'><a href="module-secure%252520-%252520positionRequirements_resolvers.html#~library">library</a></li><li data-type='method'><a href="module-secure%252520-%252520positionRequirements_resolvers.html#~list">list</a></li><li data-type='method'><a href="module-secure%252520-%252520positionRequirements_resolvers.html#~overview">overview</a></li><li data-type='method'><a href="module-secure%252520-%252520positionRequirements_resolvers.html#~unknownPositions">unknownPositions</a></li><li data-type='method'><a href="module-secure%252520-%252520positionRequirements_resolvers.html#~unknownRequirements">unknownRequirements</a></li></ul></li><li><a href="module-secure%2520-%2520positionRequirements_utils.html">secure - positionRequirements/utils</a><ul class='methods'><li data-type='method'><a href="module-secure%252520-%252520positionRequirements_utils.html#~andRequirementsBtn">andRequirementsBtn</a></li><li data-type='method'><a href="module-secure%252520-%252520positionRequirements_utils.html#~chooseOptionBtnMore">chooseOptionBtnMore</a></li><li data-type='method'><a href="module-secure%252520-%252520positionRequirements_utils.html#~chooseRequirementsOptions">chooseRequirementsOptions</a></li><li data-type='method'><a href="module-secure%252520-%252520positionRequirements_utils.html#~fillRequirement">fillRequirement</a></li><li data-type='method'><a href="module-secure%252520-%252520positionRequirements_utils.html#~getWorkgroupPosition">getWorkgroupPosition</a></li></ul></li><li><a href="module-secure%2520-%2520prehire_resolvers.html">secure - prehire/resolvers</a><ul class='methods'><li data-type='method'><a href="module-secure%252520-%252520prehire_resolvers.html#~byIssue">byIssue</a></li><li data-type='method'><a href="module-secure%252520-%252520prehire_resolvers.html#~byStartDate">byStartDate</a></li><li data-type='method'><a href="module-secure%252520-%252520prehire_resolvers.html#~candidateHiringStatusCalcucate">candidateHiringStatusCalcucate</a></li><li data-type='method'><a href="module-secure%252520-%252520prehire_resolvers.html#~candidateListExported">candidateListExported</a></li><li data-type='method'><a href="module-secure%252520-%252520prehire_resolvers.html#~candidatePositionRequirementLoad">candidatePositionRequirementLoad</a></li><li data-type='method'><a href="module-secure%252520-%252520prehire_resolvers.html#~candidateRequirementStatusCalculate">candidateRequirementStatusCalculate</a></li><li data-type='method'><a href="module-secure%252520-%252520prehire_resolvers.html#~candidateTotal">candidateTotal</a></li><li data-type='method'><a href="module-secure%252520-%252520prehire_resolvers.html#~canditateListFiltred">canditateListFiltred</a></li><li data-type='method'><a href="module-secure%252520-%252520prehire_resolvers.html#~canditateListLoad">canditateListLoad</a></li><li data-type='method'><a href="module-secure%252520-%252520prehire_resolvers.html#~daysInSystem">daysInSystem</a></li></ul></li><li><a href="module-secure%2520-%2520prehire_utils.html">secure - prehire/utils</a><ul class='methods'><li data-type='method'><a href="module-secure%252520-%252520prehire_utils.html#~convertSelectorReplacedTextToNum">convertSelectorReplacedTextToNum</a></li><li data-type='method'><a href="module-secure%252520-%252520prehire_utils.html#~convertSelectorTextToNum">convertSelectorTextToNum</a></li><li data-type='method'><a href="module-secure%252520-%252520prehire_utils.html#~waitStatusCalculate">waitStatusCalculate</a></li></ul></li><li><a href="module-secure%2520-%2520reports_resolvers.html">secure - reports/resolvers</a><ul class='methods'><li data-type='method'><a href="module-secure%252520-%252520reports_resolvers.html#~dateRenewed">dateRenewed</a></li><li data-type='method'><a href="module-secure%252520-%252520reports_resolvers.html#~expirationDate">expirationDate</a></li><li data-type='method'><a href="module-secure%252520-%252520reports_resolvers.html#~licenseStatus">licenseStatus</a></li></ul></li><li><a href="module-secure%2520-%2520reports_utils.html">secure - reports/utils</a><ul class='methods'><li data-type='method'><a href="module-secure%252520-%252520reports_utils.html#~waitDataTextInSelectors">waitDataTextInSelectors</a></li></ul></li><li><a href="module-secure%2520-%2520utils.html">secure - utils</a><ul class='methods'><li data-type='method'><a href="module-secure%252520-%252520utils.html#~chatAssistantExist">chatAssistantExist</a></li><li data-type='method'><a href="module-secure%252520-%252520utils.html#~hideChatAssistant">hideChatAssistant</a></li></ul></li><li><a href="module-utils.html">utils</a><ul class='methods'><li data-type='method'><a href="module-utils.html#~checkFilerAndClickFromList">checkFilerAndClickFromList</a></li><li data-type='method'><a href="module-utils.html#~checkFilter">checkFilter</a></li><li data-type='method'><a href="module-utils.html#~containDecimal">containDecimal</a></li><li data-type='method'><a href="module-utils.html#~isArrayEquals">isArrayEquals</a></li><li data-type='method'><a href="module-utils.html#~waitForTextInList">waitForTextInList</a></li><li data-type='method'><a href="module-utils.html#~waitTextContentInSelector">waitTextContentInSelector</a></li><li data-type='method'><a href="module-utils.html#~waitTextExistsInSelector">waitTextExistsInSelector</a></li></ul></li></ul></div>
+</nav>
 
 <div id="main">
-
-    <h1 class="page-title">Module: secure - employee/resolvers</h1>
+    
+    <h1 class="page-title">secure - employee/resolvers</h1>
+    
 
     
 
@@ -26,11 +57,13 @@
 
 <section>
 
+
 <header>
     
         
     
 </header>
+
 
 <article>
     <div class="container-overview">
@@ -47,9 +80,7 @@
 
     
 
-    
-
-    
+     
 
     
 
@@ -63,12 +94,10 @@
 
     
 
-    
     <h4 class="name" id="~byIdEmployeeNumber"><span class="type-signature">(async, inner) </span>byIdEmployeeNumber<span class="signature">(puppeteer-page, pending-xhr-puppeteer)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
-    
 
     
-    <p class="summary"><p>Go to employee section, type the employee id number in the search panel, wait for response and evaluate the results obtained.</p></p>
+        <p class="summary"><p>Go to employee section, type the employee id number in the search panel, wait for response and evaluate the results obtained.</p></p>
     
 
 
@@ -81,8 +110,9 @@
 
 
 
-    <h5>Parameters:</h5>
-    
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
 
 <table class="params">
     <thead>
@@ -152,6 +182,7 @@
     </tbody>
 </table>
 
+    </div>
 
 
 
@@ -184,10 +215,12 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html">scraping/scripts/secure.evercheck.com/employee/resolvers.js</a>, <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html#line130">line 130</a>
-    </li></ul></dd>
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html">scraping/scripts/secure.evercheck.com/employee/resolvers.js</a>, <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html#line130">line 130</a>
+            </li></ul></dd>
+        </div>
     
 
     
@@ -207,10 +240,8 @@
 
 
 
-
-
-<h5>Throws:</h5>
-
+    <strong>Throws:</strong>
+    
         
 
 <dl>
@@ -240,16 +271,17 @@
     
 
 
-<h5>Returns:</h5>
-
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
         
+            
 <div class="param-desc">
     <p>Boolean</p>
 </div>
 
 
 
-<dl>
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -260,9 +292,8 @@
 
     </dd>
 </dl>
-
-    
-
+ 
+    </div>
 
 
 
@@ -272,12 +303,10 @@
 
     
 
-    
     <h4 class="name" id="~byIdEmployeeNumberTop"><span class="type-signature">(async, inner) </span>byIdEmployeeNumberTop<span class="signature">(puppeteer-page, pending-xhr-puppeteer)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
-    
 
     
-    <p class="summary"><p>Go to employee section, type the employee id number in the top search bar, wait for response and evaluate the results obtained.</p></p>
+        <p class="summary"><p>Go to employee section, type the employee id number in the top search bar, wait for response and evaluate the results obtained.</p></p>
     
 
 
@@ -290,8 +319,9 @@
 
 
 
-    <h5>Parameters:</h5>
-    
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
 
 <table class="params">
     <thead>
@@ -361,6 +391,7 @@
     </tbody>
 </table>
 
+    </div>
 
 
 
@@ -393,10 +424,12 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html">scraping/scripts/secure.evercheck.com/employee/resolvers.js</a>, <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html#line165">line 165</a>
-    </li></ul></dd>
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html">scraping/scripts/secure.evercheck.com/employee/resolvers.js</a>, <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html#line165">line 165</a>
+            </li></ul></dd>
+        </div>
     
 
     
@@ -416,10 +449,8 @@
 
 
 
-
-
-<h5>Throws:</h5>
-
+    <strong>Throws:</strong>
+    
         
 
 <dl>
@@ -449,16 +480,17 @@
     
 
 
-<h5>Returns:</h5>
-
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
         
+            
 <div class="param-desc">
     <p>Boolean</p>
 </div>
 
 
 
-<dl>
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -469,9 +501,8 @@
 
     </dd>
 </dl>
-
-    
-
+ 
+    </div>
 
 
 
@@ -481,12 +512,10 @@
 
     
 
-    
     <h4 class="name" id="~byLCR"><span class="type-signature">(async, inner) </span>byLCR<span class="signature">(puppeteer-page, pending-xhr-puppeteer)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
-    
 
     
-    <p class="summary"><p>Go to employee section, type the employee license number in the search panel, wait for response and evaluate the results obtained.</p></p>
+        <p class="summary"><p>Go to employee section, type the employee license number in the search panel, wait for response and evaluate the results obtained.</p></p>
     
 
 
@@ -499,8 +528,9 @@
 
 
 
-    <h5>Parameters:</h5>
-    
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
 
 <table class="params">
     <thead>
@@ -570,6 +600,7 @@
     </tbody>
 </table>
 
+    </div>
 
 
 
@@ -602,10 +633,12 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html">scraping/scripts/secure.evercheck.com/employee/resolvers.js</a>, <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html#line221">line 221</a>
-    </li></ul></dd>
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html">scraping/scripts/secure.evercheck.com/employee/resolvers.js</a>, <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html#line221">line 221</a>
+            </li></ul></dd>
+        </div>
     
 
     
@@ -625,10 +658,8 @@
 
 
 
-
-
-<h5>Throws:</h5>
-
+    <strong>Throws:</strong>
+    
         
 
 <dl>
@@ -658,16 +689,17 @@
     
 
 
-<h5>Returns:</h5>
-
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
         
+            
 <div class="param-desc">
     <p>Boolean</p>
 </div>
 
 
 
-<dl>
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -678,9 +710,8 @@
 
     </dd>
 </dl>
-
-    
-
+ 
+    </div>
 
 
 
@@ -690,12 +721,10 @@
 
     
 
-    
     <h4 class="name" id="~byLCRTop"><span class="type-signature">(async, inner) </span>byLCRTop<span class="signature">(puppeteer-page, pending-xhr-puppeteer)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
-    
 
     
-    <p class="summary"><p>Go to employee section, type the employee license number in the top search bar, wait for response and evaluate the results obtained.</p></p>
+        <p class="summary"><p>Go to employee section, type the employee license number in the top search bar, wait for response and evaluate the results obtained.</p></p>
     
 
 
@@ -708,8 +737,9 @@
 
 
 
-    <h5>Parameters:</h5>
-    
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
 
 <table class="params">
     <thead>
@@ -779,6 +809,7 @@
     </tbody>
 </table>
 
+    </div>
 
 
 
@@ -811,10 +842,12 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html">scraping/scripts/secure.evercheck.com/employee/resolvers.js</a>, <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html#line256">line 256</a>
-    </li></ul></dd>
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html">scraping/scripts/secure.evercheck.com/employee/resolvers.js</a>, <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html#line256">line 256</a>
+            </li></ul></dd>
+        </div>
     
 
     
@@ -834,10 +867,8 @@
 
 
 
-
-
-<h5>Throws:</h5>
-
+    <strong>Throws:</strong>
+    
         
 
 <dl>
@@ -867,16 +898,17 @@
     
 
 
-<h5>Returns:</h5>
-
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
         
+            
 <div class="param-desc">
     <p>Boolean</p>
 </div>
 
 
 
-<dl>
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -887,9 +919,8 @@
 
     </dd>
 </dl>
-
-    
-
+ 
+    </div>
 
 
 
@@ -899,12 +930,10 @@
 
     
 
-    
     <h4 class="name" id="~byName"><span class="type-signature">(async, inner) </span>byName<span class="signature">(puppeteer-page, pending-xhr-puppeteer)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
-    
 
     
-    <p class="summary"><p>Go to employee section, type the employee name in the search panel, wait for response and evaluate the results obtained.</p></p>
+        <p class="summary"><p>Go to employee section, type the employee name in the search panel, wait for response and evaluate the results obtained.</p></p>
     
 
 
@@ -917,8 +946,9 @@
 
 
 
-    <h5>Parameters:</h5>
-    
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
 
 <table class="params">
     <thead>
@@ -988,6 +1018,7 @@
     </tbody>
 </table>
 
+    </div>
 
 
 
@@ -1020,10 +1051,12 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html">scraping/scripts/secure.evercheck.com/employee/resolvers.js</a>, <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html#line40">line 40</a>
-    </li></ul></dd>
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html">scraping/scripts/secure.evercheck.com/employee/resolvers.js</a>, <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html#line40">line 40</a>
+            </li></ul></dd>
+        </div>
     
 
     
@@ -1043,10 +1076,8 @@
 
 
 
-
-
-<h5>Throws:</h5>
-
+    <strong>Throws:</strong>
+    
         
 
 <dl>
@@ -1076,16 +1107,17 @@
     
 
 
-<h5>Returns:</h5>
-
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
         
+            
 <div class="param-desc">
     <p>Boolean</p>
 </div>
 
 
 
-<dl>
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -1096,9 +1128,8 @@
 
     </dd>
 </dl>
-
-    
-
+ 
+    </div>
 
 
 
@@ -1108,12 +1139,10 @@
 
     
 
-    
     <h4 class="name" id="~byNameTop"><span class="type-signature">(async, inner) </span>byNameTop<span class="signature">(puppeteer-page, pending-xhr-puppeteer)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
-    
 
     
-    <p class="summary"><p>Go to employee section, type the employee name in the top serach bar, wait for response and evaluate the results obtained.</p></p>
+        <p class="summary"><p>Go to employee section, type the employee name in the top serach bar, wait for response and evaluate the results obtained.</p></p>
     
 
 
@@ -1126,8 +1155,9 @@
 
 
 
-    <h5>Parameters:</h5>
-    
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
 
 <table class="params">
     <thead>
@@ -1197,6 +1227,7 @@
     </tbody>
 </table>
 
+    </div>
 
 
 
@@ -1229,10 +1260,12 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html">scraping/scripts/secure.evercheck.com/employee/resolvers.js</a>, <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html#line75">line 75</a>
-    </li></ul></dd>
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html">scraping/scripts/secure.evercheck.com/employee/resolvers.js</a>, <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html#line75">line 75</a>
+            </li></ul></dd>
+        </div>
     
 
     
@@ -1252,10 +1285,8 @@
 
 
 
-
-
-<h5>Throws:</h5>
-
+    <strong>Throws:</strong>
+    
         
 
 <dl>
@@ -1285,16 +1316,17 @@
     
 
 
-<h5>Returns:</h5>
-
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
         
+            
 <div class="param-desc">
     <p>Boolean</p>
 </div>
 
 
 
-<dl>
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -1305,9 +1337,8 @@
 
     </dd>
 </dl>
-
-    
-
+ 
+    </div>
 
 
 
@@ -1317,12 +1348,10 @@
 
     
 
-    
     <h4 class="name" id="~checkPositionRequirementSatisfied"><span class="type-signature">(async, inner) </span>checkPositionRequirementSatisfied<span class="signature">(puppeteer-page, pending-xhr-puppeteer)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
-    
 
     
-    <p class="summary"><p>Go to employee section, click on employee profiles, search and choose an employee with positions satisfied, wait until position requirements panel loads and check if the message on display is 'requirement satisfied'</p></p>
+        <p class="summary"><p>Go to employee section, click on employee profiles, search and choose an employee with positions satisfied, wait until position requirements panel loads and check if the message on display is 'requirement satisfied'</p></p>
     
 
 
@@ -1335,8 +1364,9 @@
 
 
 
-    <h5>Parameters:</h5>
-    
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
 
 <table class="params">
     <thead>
@@ -1406,6 +1436,7 @@
     </tbody>
 </table>
 
+    </div>
 
 
 
@@ -1438,10 +1469,12 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html">scraping/scripts/secure.evercheck.com/employee/resolvers.js</a>, <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html#line350">line 350</a>
-    </li></ul></dd>
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html">scraping/scripts/secure.evercheck.com/employee/resolvers.js</a>, <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html#line350">line 350</a>
+            </li></ul></dd>
+        </div>
     
 
     
@@ -1461,10 +1494,8 @@
 
 
 
-
-
-<h5>Throws:</h5>
-
+    <strong>Throws:</strong>
+    
         
 
 <dl>
@@ -1494,16 +1525,17 @@
     
 
 
-<h5>Returns:</h5>
-
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
         
+            
 <div class="param-desc">
     <p>Boolean</p>
 </div>
 
 
 
-<dl>
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -1514,9 +1546,8 @@
 
     </dd>
 </dl>
-
-    
-
+ 
+    </div>
 
 
 
@@ -1526,12 +1557,10 @@
 
     
 
-    
     <h4 class="name" id="~loadPositionRequirements"><span class="type-signature">(async, inner) </span>loadPositionRequirements<span class="signature">(puppeteer-page, pending-xhr-puppeteer)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
-    
 
     
-    <p class="summary"><p>Go to employee section, click on employee profiles and wait until position requirements panel is loaded.</p></p>
+        <p class="summary"><p>Go to employee section, click on employee profiles and wait until position requirements panel is loaded.</p></p>
     
 
 
@@ -1544,8 +1573,9 @@
 
 
 
-    <h5>Parameters:</h5>
-    
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
 
 <table class="params">
     <thead>
@@ -1615,6 +1645,7 @@
     </tbody>
 </table>
 
+    </div>
 
 
 
@@ -1647,10 +1678,12 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html">scraping/scripts/secure.evercheck.com/employee/resolvers.js</a>, <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html#line312">line 312</a>
-    </li></ul></dd>
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html">scraping/scripts/secure.evercheck.com/employee/resolvers.js</a>, <a href="scraping_scripts_secure.evercheck.com_employee_resolvers.js.html#line312">line 312</a>
+            </li></ul></dd>
+        </div>
     
 
     
@@ -1670,10 +1703,8 @@
 
 
 
-
-
-<h5>Throws:</h5>
-
+    <strong>Throws:</strong>
+    
         
 
 <dl>
@@ -1703,16 +1734,17 @@
     
 
 
-<h5>Returns:</h5>
-
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
         
+            
 <div class="param-desc">
     <p>Boolean</p>
 </div>
 
 
 
-<dl>
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -1723,9 +1755,8 @@
 
     </dd>
 </dl>
-
-    
-
+ 
+    </div>
 
 
 
@@ -1745,17 +1776,20 @@
 
 </div>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-accounts.html">accounts</a></li><li><a href="module-secure%2520-%2520bulkUploads_resolvers.html">secure - bulkUploads/resolvers</a></li><li><a href="module-secure%2520-%2520employee_resolvers.html">secure - employee/resolvers</a></li><li><a href="module-secure%2520-%2520employee_utils.html">secure - employee/utils</a></li><li><a href="module-secure%2520-%2520licenseVerification_resolvers.html">secure - licenseVerification/resolvers</a></li><li><a href="module-secure%2520-%2520positionRequirements_resolvers.html">secure - positionRequirements/resolvers</a></li><li><a href="module-secure%2520-%2520positionRequirements_utils.html">secure - positionRequirements/utils</a></li><li><a href="module-secure%2520-%2520prehire_resolvers.html">secure - prehire/resolvers</a></li><li><a href="module-secure%2520-%2520prehire_utils.html">secure - prehire/utils</a></li><li><a href="module-secure%2520-%2520reports_resolvers.html">secure - reports/resolvers</a></li><li><a href="module-secure%2520-%2520reports_utils.html">secure - reports/utils</a></li><li><a href="module-secure%2520-%2520utils.html">secure - utils</a></li><li><a href="module-utils.html">utils</a></li></ul><h3>Classes</h3><ul><li><a href="Puppeteer.html">Puppeteer</a></li><li><a href="Smoke.html">Smoke</a></li><li><a href="TestClient.html">TestClient</a></li></ul>
-</nav>
-
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.5</a> on Fri Sep 11 2020 23:03:05 GMT+0000 (Coordinated Universal Time)
+  
 </footer>
 
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+<script>
+var list = [{"title":"Puppeteer","link":"<a href=\"Puppeteer.html\">Puppeteer</a>"},{"title":"Puppeteer#newPage","link":"<a href=\"Puppeteer.html#newPage\">Puppeteer &rtrif; newPage</a>"},{"title":"Smoke","link":"<a href=\"Smoke.html\">Smoke</a>"},{"title":"Smoke#executeTest","link":"<a href=\"Smoke.html#executeTest\">Smoke &rtrif; executeTest</a>"},{"title":"Smoke#getTestFolderDetails","link":"<a href=\"Smoke.html#getTestFolderDetails\">Smoke &rtrif; getTestFolderDetails</a>"},{"title":"Smoke#updateGroupsByEnvironment","link":"<a href=\"Smoke.html#updateGroupsByEnvironment\">Smoke &rtrif; updateGroupsByEnvironment</a>"},{"title":"Smoke#updateSuiteResultsKeys","link":"<a href=\"Smoke.html#updateSuiteResultsKeys\">Smoke &rtrif; updateSuiteResultsKeys</a>"},{"title":"TestClient","link":"<a href=\"TestClient.html\">TestClient</a>"},{"title":"TestClient#collectMetricsBegin","link":"<a href=\"TestClient.html#collectMetricsBegin\">TestClient &rtrif; collectMetricsBegin</a>"},{"title":"TestClient#collectMetricsEnd","link":"<a href=\"TestClient.html#collectMetricsEnd\">TestClient &rtrif; collectMetricsEnd</a>"},{"title":"TestClient#formatResult","link":"<a href=\"TestClient.html#formatResult\">TestClient &rtrif; formatResult</a>"},{"title":"accounts","link":"<a href=\"module-accounts.html\">accounts</a>"},{"title":"module:accounts~login","link":"<a href=\"module-accounts.html#~login\">module:accounts~login &rtrif; undefined</a>"},{"title":"module:accounts~loginPage","link":"<a href=\"module-accounts.html#~loginPage\">module:accounts~loginPage &rtrif; undefined</a>"},{"title":"module:accounts~logout","link":"<a href=\"module-accounts.html#~logout\">module:accounts~logout &rtrif; undefined</a>"},{"title":"secure - bulkUploads/resolvers","link":"<a href=\"module-secure%2520-%2520bulkUploads_resolvers.html\">secure - bulkUploads/resolvers</a>"},{"title":"module:secure - bulkUploads/resolvers~downloadAndCheckSummary","link":"<a href=\"module-secure%252520-%252520bulkUploads_resolvers.html#~downloadAndCheckSummary\">module:secure - bulkUploads/resolvers~downloadAndCheckSummary &rtrif; undefined</a>"},{"title":"secure - employee/resolvers","link":"<a href=\"module-secure%2520-%2520employee_resolvers.html\">secure - employee/resolvers</a>"},{"title":"module:secure - employee/resolvers~byIdEmployeeNumber","link":"<a href=\"module-secure%252520-%252520employee_resolvers.html#~byIdEmployeeNumber\">module:secure - employee/resolvers~byIdEmployeeNumber &rtrif; undefined</a>"},{"title":"module:secure - employee/resolvers~byIdEmployeeNumberTop","link":"<a href=\"module-secure%252520-%252520employee_resolvers.html#~byIdEmployeeNumberTop\">module:secure - employee/resolvers~byIdEmployeeNumberTop &rtrif; undefined</a>"},{"title":"module:secure - employee/resolvers~byLCR","link":"<a href=\"module-secure%252520-%252520employee_resolvers.html#~byLCR\">module:secure - employee/resolvers~byLCR &rtrif; undefined</a>"},{"title":"module:secure - employee/resolvers~byLCRTop","link":"<a href=\"module-secure%252520-%252520employee_resolvers.html#~byLCRTop\">module:secure - employee/resolvers~byLCRTop &rtrif; undefined</a>"},{"title":"module:secure - employee/resolvers~byName","link":"<a href=\"module-secure%252520-%252520employee_resolvers.html#~byName\">module:secure - employee/resolvers~byName &rtrif; undefined</a>"},{"title":"module:secure - employee/resolvers~byNameTop","link":"<a href=\"module-secure%252520-%252520employee_resolvers.html#~byNameTop\">module:secure - employee/resolvers~byNameTop &rtrif; undefined</a>"},{"title":"module:secure - employee/resolvers~checkPositionRequirementSatisfied","link":"<a href=\"module-secure%252520-%252520employee_resolvers.html#~checkPositionRequirementSatisfied\">module:secure - employee/resolvers~checkPositionRequirementSatisfied &rtrif; undefined</a>"},{"title":"module:secure - employee/resolvers~loadPositionRequirements","link":"<a href=\"module-secure%252520-%252520employee_resolvers.html#~loadPositionRequirements\">module:secure - employee/resolvers~loadPositionRequirements &rtrif; undefined</a>"},{"title":"secure - employee/utils","link":"<a href=\"module-secure%2520-%2520employee_utils.html\">secure - employee/utils</a>"},{"title":"module:secure - employee/utils~checkRequestedDataFound","link":"<a href=\"module-secure%252520-%252520employee_utils.html#~checkRequestedDataFound\">module:secure - employee/utils~checkRequestedDataFound &rtrif; undefined</a>"},{"title":"module:secure - employee/utils~positionsExist","link":"<a href=\"module-secure%252520-%252520employee_utils.html#~positionsExist\">module:secure - employee/utils~positionsExist &rtrif; undefined</a>"},{"title":"module:secure - employee/utils~setSelectorEmptyAndTypeInfo","link":"<a href=\"module-secure%252520-%252520employee_utils.html#~setSelectorEmptyAndTypeInfo\">module:secure - employee/utils~setSelectorEmptyAndTypeInfo &rtrif; undefined</a>"},{"title":"module:secure - employee/utils~waitEmployeeByParams","link":"<a href=\"module-secure%252520-%252520employee_utils.html#~waitEmployeeByParams\">module:secure - employee/utils~waitEmployeeByParams &rtrif; undefined</a>"},{"title":"module:secure - employee/utils~waitSelectorTextIsNotEmpty","link":"<a href=\"module-secure%252520-%252520employee_utils.html#~waitSelectorTextIsNotEmpty\">module:secure - employee/utils~waitSelectorTextIsNotEmpty &rtrif; undefined</a>"},{"title":"module:secure - employee/utils~waitTitleText","link":"<a href=\"module-secure%252520-%252520employee_utils.html#~waitTitleText\">module:secure - employee/utils~waitTitleText &rtrif; undefined</a>"},{"title":"secure - licenseVerification/resolvers","link":"<a href=\"module-secure%2520-%2520licenseVerification_resolvers.html\">secure - licenseVerification/resolvers</a>"},{"title":"module:secure - licenseVerification/resolvers~disciplinaryActions","link":"<a href=\"module-secure%252520-%252520licenseVerification_resolvers.html#~disciplinaryActions\">module:secure - licenseVerification/resolvers~disciplinaryActions &rtrif; undefined</a>"},{"title":"module:secure - licenseVerification/resolvers~nameDiscrepancies","link":"<a href=\"module-secure%252520-%252520licenseVerification_resolvers.html#~nameDiscrepancies\">module:secure - licenseVerification/resolvers~nameDiscrepancies &rtrif; undefined</a>"},{"title":"module:secure - licenseVerification/resolvers~pendingCredentialsReport","link":"<a href=\"module-secure%252520-%252520licenseVerification_resolvers.html#~pendingCredentialsReport\">module:secure - licenseVerification/resolvers~pendingCredentialsReport &rtrif; undefined</a>"},{"title":"module:secure - licenseVerification/resolvers~positionRequirementReport","link":"<a href=\"module-secure%252520-%252520licenseVerification_resolvers.html#~positionRequirementReport\">module:secure - licenseVerification/resolvers~positionRequirementReport &rtrif; undefined</a>"},{"title":"secure - positionRequirements/resolvers","link":"<a href=\"module-secure%2520-%2520positionRequirements_resolvers.html\">secure - positionRequirements/resolvers</a>"},{"title":"module:secure - positionRequirements/resolvers~library","link":"<a href=\"module-secure%252520-%252520positionRequirements_resolvers.html#~library\">module:secure - positionRequirements/resolvers~library &rtrif; undefined</a>"},{"title":"module:secure - positionRequirements/resolvers~list","link":"<a href=\"module-secure%252520-%252520positionRequirements_resolvers.html#~list\">module:secure - positionRequirements/resolvers~list &rtrif; undefined</a>"},{"title":"module:secure - positionRequirements/resolvers~overview","link":"<a href=\"module-secure%252520-%252520positionRequirements_resolvers.html#~overview\">module:secure - positionRequirements/resolvers~overview &rtrif; undefined</a>"},{"title":"module:secure - positionRequirements/resolvers~unknownPositions","link":"<a href=\"module-secure%252520-%252520positionRequirements_resolvers.html#~unknownPositions\">module:secure - positionRequirements/resolvers~unknownPositions &rtrif; undefined</a>"},{"title":"module:secure - positionRequirements/resolvers~unknownRequirements","link":"<a href=\"module-secure%252520-%252520positionRequirements_resolvers.html#~unknownRequirements\">module:secure - positionRequirements/resolvers~unknownRequirements &rtrif; undefined</a>"},{"title":"secure - positionRequirements/utils","link":"<a href=\"module-secure%2520-%2520positionRequirements_utils.html\">secure - positionRequirements/utils</a>"},{"title":"module:secure - positionRequirements/utils~andRequirementsBtn","link":"<a href=\"module-secure%252520-%252520positionRequirements_utils.html#~andRequirementsBtn\">module:secure - positionRequirements/utils~andRequirementsBtn &rtrif; undefined</a>"},{"title":"module:secure - positionRequirements/utils~chooseOptionBtnMore","link":"<a href=\"module-secure%252520-%252520positionRequirements_utils.html#~chooseOptionBtnMore\">module:secure - positionRequirements/utils~chooseOptionBtnMore &rtrif; undefined</a>"},{"title":"module:secure - positionRequirements/utils~chooseRequirementsOptions","link":"<a href=\"module-secure%252520-%252520positionRequirements_utils.html#~chooseRequirementsOptions\">module:secure - positionRequirements/utils~chooseRequirementsOptions &rtrif; undefined</a>"},{"title":"module:secure - positionRequirements/utils~fillRequirement","link":"<a href=\"module-secure%252520-%252520positionRequirements_utils.html#~fillRequirement\">module:secure - positionRequirements/utils~fillRequirement &rtrif; undefined</a>"},{"title":"module:secure - positionRequirements/utils~getWorkgroupPosition","link":"<a href=\"module-secure%252520-%252520positionRequirements_utils.html#~getWorkgroupPosition\">module:secure - positionRequirements/utils~getWorkgroupPosition &rtrif; undefined</a>"},{"title":"secure - prehire/resolvers","link":"<a href=\"module-secure%2520-%2520prehire_resolvers.html\">secure - prehire/resolvers</a>"},{"title":"module:secure - prehire/resolvers~byIssue","link":"<a href=\"module-secure%252520-%252520prehire_resolvers.html#~byIssue\">module:secure - prehire/resolvers~byIssue &rtrif; undefined</a>"},{"title":"module:secure - prehire/resolvers~byStartDate","link":"<a href=\"module-secure%252520-%252520prehire_resolvers.html#~byStartDate\">module:secure - prehire/resolvers~byStartDate &rtrif; undefined</a>"},{"title":"module:secure - prehire/resolvers~candidateHiringStatusCalcucate","link":"<a href=\"module-secure%252520-%252520prehire_resolvers.html#~candidateHiringStatusCalcucate\">module:secure - prehire/resolvers~candidateHiringStatusCalcucate &rtrif; undefined</a>"},{"title":"module:secure - prehire/resolvers~candidateListExported","link":"<a href=\"module-secure%252520-%252520prehire_resolvers.html#~candidateListExported\">module:secure - prehire/resolvers~candidateListExported &rtrif; undefined</a>"},{"title":"module:secure - prehire/resolvers~candidatePositionRequirementLoad","link":"<a href=\"module-secure%252520-%252520prehire_resolvers.html#~candidatePositionRequirementLoad\">module:secure - prehire/resolvers~candidatePositionRequirementLoad &rtrif; undefined</a>"},{"title":"module:secure - prehire/resolvers~candidateRequirementStatusCalculate","link":"<a href=\"module-secure%252520-%252520prehire_resolvers.html#~candidateRequirementStatusCalculate\">module:secure - prehire/resolvers~candidateRequirementStatusCalculate &rtrif; undefined</a>"},{"title":"module:secure - prehire/resolvers~candidateTotal","link":"<a href=\"module-secure%252520-%252520prehire_resolvers.html#~candidateTotal\">module:secure - prehire/resolvers~candidateTotal &rtrif; undefined</a>"},{"title":"module:secure - prehire/resolvers~canditateListFiltred","link":"<a href=\"module-secure%252520-%252520prehire_resolvers.html#~canditateListFiltred\">module:secure - prehire/resolvers~canditateListFiltred &rtrif; undefined</a>"},{"title":"module:secure - prehire/resolvers~canditateListLoad","link":"<a href=\"module-secure%252520-%252520prehire_resolvers.html#~canditateListLoad\">module:secure - prehire/resolvers~canditateListLoad &rtrif; undefined</a>"},{"title":"module:secure - prehire/resolvers~daysInSystem","link":"<a href=\"module-secure%252520-%252520prehire_resolvers.html#~daysInSystem\">module:secure - prehire/resolvers~daysInSystem &rtrif; undefined</a>"},{"title":"secure - prehire/utils","link":"<a href=\"module-secure%2520-%2520prehire_utils.html\">secure - prehire/utils</a>"},{"title":"module:secure - prehire/utils~convertSelectorReplacedTextToNum","link":"<a href=\"module-secure%252520-%252520prehire_utils.html#~convertSelectorReplacedTextToNum\">module:secure - prehire/utils~convertSelectorReplacedTextToNum &rtrif; undefined</a>"},{"title":"module:secure - prehire/utils~convertSelectorTextToNum","link":"<a href=\"module-secure%252520-%252520prehire_utils.html#~convertSelectorTextToNum\">module:secure - prehire/utils~convertSelectorTextToNum &rtrif; undefined</a>"},{"title":"module:secure - prehire/utils~waitStatusCalculate","link":"<a href=\"module-secure%252520-%252520prehire_utils.html#~waitStatusCalculate\">module:secure - prehire/utils~waitStatusCalculate &rtrif; undefined</a>"},{"title":"secure - reports/resolvers","link":"<a href=\"module-secure%2520-%2520reports_resolvers.html\">secure - reports/resolvers</a>"},{"title":"module:secure - reports/resolvers~dateRenewed","link":"<a href=\"module-secure%252520-%252520reports_resolvers.html#~dateRenewed\">module:secure - reports/resolvers~dateRenewed &rtrif; undefined</a>"},{"title":"module:secure - reports/resolvers~expirationDate","link":"<a href=\"module-secure%252520-%252520reports_resolvers.html#~expirationDate\">module:secure - reports/resolvers~expirationDate &rtrif; undefined</a>"},{"title":"module:secure - reports/resolvers~licenseStatus","link":"<a href=\"module-secure%252520-%252520reports_resolvers.html#~licenseStatus\">module:secure - reports/resolvers~licenseStatus &rtrif; undefined</a>"},{"title":"secure - reports/utils","link":"<a href=\"module-secure%2520-%2520reports_utils.html\">secure - reports/utils</a>"},{"title":"module:secure - reports/utils~waitDataTextInSelectors","link":"<a href=\"module-secure%252520-%252520reports_utils.html#~waitDataTextInSelectors\">module:secure - reports/utils~waitDataTextInSelectors &rtrif; undefined</a>"},{"title":"secure - utils","link":"<a href=\"module-secure%2520-%2520utils.html\">secure - utils</a>"},{"title":"module:secure - utils~chatAssistantExist","link":"<a href=\"module-secure%252520-%252520utils.html#~chatAssistantExist\">module:secure - utils~chatAssistantExist &rtrif; undefined</a>"},{"title":"module:secure - utils~hideChatAssistant","link":"<a href=\"module-secure%252520-%252520utils.html#~hideChatAssistant\">module:secure - utils~hideChatAssistant &rtrif; undefined</a>"},{"title":"utils","link":"<a href=\"module-utils.html\">utils</a>"},{"title":"module:utils~checkFilerAndClickFromList","link":"<a href=\"module-utils.html#~checkFilerAndClickFromList\">module:utils~checkFilerAndClickFromList &rtrif; undefined</a>"},{"title":"module:utils~checkFilter","link":"<a href=\"module-utils.html#~checkFilter\">module:utils~checkFilter &rtrif; undefined</a>"},{"title":"module:utils~containDecimal","link":"<a href=\"module-utils.html#~containDecimal\">module:utils~containDecimal &rtrif; undefined</a>"},{"title":"module:utils~isArrayEquals","link":"<a href=\"module-utils.html#~isArrayEquals\">module:utils~isArrayEquals &rtrif; undefined</a>"},{"title":"module:utils~waitForTextInList","link":"<a href=\"module-utils.html#~waitForTextInList\">module:utils~waitForTextInList &rtrif; undefined</a>"},{"title":"module:utils~waitTextContentInSelector","link":"<a href=\"module-utils.html#~waitTextContentInSelector\">module:utils~waitTextContentInSelector &rtrif; undefined</a>"},{"title":"module:utils~waitTextExistsInSelector","link":"<a href=\"module-utils.html#~waitTextExistsInSelector\">module:utils~waitTextExistsInSelector &rtrif; undefined</a>"}];
+setupSearch(list)
+</script>
+
+ 
+<script type="text/javascript" src="scripts/misc.js"></script>
 </body>
 </html>
