@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: helpers/testClient/index.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: helpers/testClient/index.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const metrics = require('@condor-labs/metrics');
+const { sleep } = require('./../../utils');
+const {
+  METRICS_SMOKE_TESTS_TOTAL,
+  METRICS_SMOKE_TESTS_STATUS,
+  METRICS_SMOKE_TESTS_DURATION,
+  METRICS_SMOKE_TESTS_LAST_TIME,
+  METRICS_SMOKE_TESTS_SUITE_STATUS,
+  METRICS_WAIT_TIME
+} = require('./../constants');
+
+/**
+ * @class TestClient
+ * @constructor
+ * @param {String} datacenter - BDU|JAX
+ * @param {String} testGroups - auth.evercheck.com, ...
+ * @classdesc TestClient class, contains collectMetrics functions
+ */
+class TestClient {
+  /**
+   * @method
+   * @async
+   * @param {String} datacenter - JAX|BDU
+   * @param {String} testGroups - auth.evercheck.com ....
+   * @summary This function collects the first metrics (running)
+   */
+  async collectMetricsBegin(datacenter, testGroups) {
+    let mtestGroups = testGroups.split('|');
+    for (let i = 0; i &lt; mtestGroups.length; i++) {
+      // Suite testing just started (RUNNING = 1)
+      metrics.gauge(METRICS_SMOKE_TESTS_SUITE_STATUS, 1, {
+        datacenter,
+        group: mtestGroups[i]
+      });
+    }
+    // wait a  few miliseconds before continue saving metrics
+    await sleep(METRICS_WAIT_TIME);
+  }
+
+   /**
+   * @method
+   * @async
+   * @param {Object} result - Smoke tests results
+   * @return {Object} Parsed smoke test results
+   * @summary This function receives the smokes tests results and then parses them
+   */
+  async formatResult(result) {
+    if (
+      result.error ||
+      !result.results ||
+      !result.results.testResults ||
+      result.results.testResults.length === 0
+    ) {
+      return result;
+    }
+    let ret = {
+      status: 'passed',
+      duration: 0,
+      suites: {}
+    };
+
+    result.results.testResults.map(testR => {
+      testR.testResults.map(testR2 => {
+        // remove special chars
+        let appName = testR2.ancestorTitles[0].replace('\b\f\n\r\t"\\', ''),
+          flowName = testR2.ancestorTitles[1].replace('\b\f\n\r\t"\\', ''),
+          stepName = testR2.title.replace('\b\f\n\r\t"\\', '');
+
+        if (!ret.suites[appName]) {
+          ret.suites[appName] = {
+            testSuite: testR2.ancestorTitles[0],
+            status: 'passed',
+            duration: 0,
+            failureMessages: [],
+            numFailingTests: 0,
+            numPassingTests: 0,
+            flows: {}
+          };
+        }
+        if (!ret.suites[appName]['flows'][flowName]) {
+          ret.suites[appName]['flows'][flowName] = {
+            status: 'passed',
+            duration: 0,
+            failureMessages: [],
+            steps: {}
+          };
+        }
+        // update root
+        ret.duration += testR2.duration;
+        if (ret.status == 'passed') {
+          ret.status = testR2.status;
+        }
+        // update suite
+        ret.suites[appName].duration += testR2.duration;
+        let firstErrorMessage =
+          testR2.failureMessages[0] &amp;&amp; testR2.failureMessages[0].length
+            ? testR2.failureMessages[0].split('\n')[0]
+            : testR2.failureMessages;
+        ret.suites[appName].failureMessages.push(firstErrorMessage);
+
+        ret.suites[appName].numFailingTests += testR2.failureMessages.length > 0 ? 1 : 0;
+        ret.suites[appName].numPassingTests += testR2.failureMessages.length > 0 ? 0 : 1;
+        if (ret.suites[appName].status == 'passed') {
+          ret.suites[appName].status = testR2.status;
+        }
+        // update flow
+        ret.suites[appName]['flows'][flowName].duration += testR2.duration;
+        let firstErrorMessage2 =
+          testR2.failureMessages[0] &amp;&amp; testR2.failureMessages[0].length
+            ? testR2.failureMessages[0].split('\n')[0]
+            : testR2.failureMessages;
+        ret.suites[appName]['flows'][flowName].failureMessages.push(firstErrorMessage2);
+        if (ret.suites[appName]['flows'][flowName].status == 'passed') {
+          ret.suites[appName]['flows'][flowName].status = testR2.status;
+        }
+        // save step
+        ret.suites[appName]['flows'][flowName]['steps'][stepName] = {
+          duration: testR2.duration,
+          status: testR2.status,
+          fullName: testR2.fullName,
+          failureMessage: firstErrorMessage2
+        };
+      });
+    });
+    return ret;
+  }
+
+  /**
+   * @param {String} datacenter - JAX|BDU
+   * @param {String} testGroups - auth.evercheck.com ....
+   * @summary This function collects the final metrics (stopped)
+   */
+  async collectMetricsEnd(datacenter, result) {
+    for (let key in result.suites) {
+      let suite = result.suites[key];
+      // Suite testing has been completed (STOPPED = 0)
+      metrics.gauge(METRICS_SMOKE_TESTS_SUITE_STATUS, 0, {
+        datacenter,
+        group: suite.testSuite
+      });
+      // save failed tests by suite
+      metrics.gauge(METRICS_SMOKE_TESTS_TOTAL, suite.numFailingTests, {
+        datacenter,
+        status: 'failed',
+        group: suite.testSuite
+      });
+      // save successful tests by suite
+      metrics.gauge(METRICS_SMOKE_TESTS_TOTAL, suite.numPassingTests, {
+        datacenter,
+        status: 'passed',
+        group: suite.testSuite
+      });
+      for (let key2 in suite.flows) {
+        let flow = suite.flows[key2];
+        // save testing status by flow
+        metrics.gauge(METRICS_SMOKE_TESTS_STATUS, flow.status === 'passed' ? 1 : 0, {
+          datacenter,
+          name: `${suite.testSuite} -> ${key2}`,
+          group: suite.testSuite
+        });
+        // save testing duration by flow
+        metrics.gauge(METRICS_SMOKE_TESTS_DURATION, flow.duration / 1000, {
+          datacenter,
+          name: `${suite.testSuite} -> ${key2}`,
+          group: suite.testSuite,
+          status: flow.status
+        });
+        // wait a  few miliseconds before continue saving metrics
+        await sleep(METRICS_WAIT_TIME);
+      }
+      // save last-time updated
+      metrics.gauge(METRICS_SMOKE_TESTS_LAST_TIME, Date.now(), {
+        datacenter,
+        group: suite.testSuite
+      });
+      // wait a  few miliseconds before continue saving metrics
+      await sleep(METRICS_WAIT_TIME);
+    }
+  }
+}
+
+module.exports = TestClient;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-accounts.html">accounts</a></li><li><a href="module-secure%2520-%2520bulkUploads_resolvers.html">secure - bulkUploads/resolvers</a></li><li><a href="module-secure%2520-%2520employee_resolvers.html">secure - employee/resolvers</a></li><li><a href="module-secure%2520-%2520employee_utils.html">secure - employee/utils</a></li><li><a href="module-secure%2520-%2520licenseVerification_resolvers.html">secure - licenseVerification/resolvers</a></li><li><a href="module-secure%2520-%2520positionRequirements_resolvers.html">secure - positionRequirements/resolvers</a></li><li><a href="module-secure%2520-%2520positionRequirements_utils.html">secure - positionRequirements/utils</a></li><li><a href="module-secure%2520-%2520prehire_resolvers.html">secure - prehire/resolvers</a></li><li><a href="module-secure%2520-%2520prehire_utils.html">secure - prehire/utils</a></li><li><a href="module-secure%2520-%2520reports_resolvers.html">secure - reports/resolvers</a></li><li><a href="module-secure%2520-%2520reports_utils.html">secure - reports/utils</a></li><li><a href="module-secure%2520-%2520utils.html">secure - utils</a></li><li><a href="module-utils.html">utils</a></li></ul><h3>Classes</h3><ul><li><a href="Puppeteer.html">Puppeteer</a></li><li><a href="Smoke.html">Smoke</a></li><li><a href="TestClient.html">TestClient</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.5</a> on Fri Sep 11 2020 21:30:58 GMT+0000 (Coordinated Universal Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

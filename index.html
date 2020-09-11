@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Home</h1>
+
+    
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h2>Production architecture</h2>
+<p><img src="./smoke-tests/smoke_tests_architecture.png" alt="Smoke Test Architecture"></p>
+<h2>Local run Smoke Test</h2>
+<ol>
+<li>Navigate to core folder</li>
+</ol>
+<pre class="prettyprint source"><code>    cd smoke-test/core
+</code></pre>
+<ol start="2">
+<li>Execute the command with a specific <a href="https://github.com/cebroker/ec-tests-stack/wiki/JSON-Secret-Manager-Structure">group</a> or regrex patten string, example <code>evercheck.com</code> or <code>prehire</code></li>
+</ol>
+<pre class="prettyprint source"><code>    npm run test $group // The smoke test will be executed to `stage production`
+</code></pre>
+<pre class="prettyprint source"><code>    npm run test:demo $group // The smoke test will be executed to `stage demo`
+</code></pre>
+<pre class="prettyprint source"><code>    npm run test:test $group // The smoke test will be executed to `stage test`
+</code></pre>
+<h2>Run Smoke Test sheduled in <code>slack channel</code></h2>
+<p><img src="https://trello-attachments.s3.amazonaws.com/5b4e5641c11f0aedbb38bf0b/5f073351eb6015649eae7b5c/a832dc81eb75e28e470616d547f14ff5/image.png" alt="Run Smoke test sheduled in slack channel"></p>
+<p>Depending on the environment and datacenter will be the instruction to the bot</p>
+<p>Example:</p>
+<p>Type in the channel</p>
+<pre class="prettyprint source"><code>    @xina test smoke test jax evercheck.com
+</code></pre>
+<p>@xina will answer you, and xina's butler will answer with the result of the test</p>
+<pre class="prettyprint source"><code>    :check: Running smoke test for jax in test environment and group evercheck.com
+</code></pre>
+<pre class="prettyprint source"><code>xina's butler 
+    Smoke Results in TEST on JAX datacenter
+        See all results in elk.test.evercheck.com
+            [test] api.test.evercheck.com/v1/api-status :white_check_mark: (3)
+            [test] test.evercheck.com/api/ :white_check_mark: (3)
+            [test] apiv2.test.evercheck.com/ :white_check_mark: (1)
+</code></pre>
+<h3>Command explanation @xina help</h3>
+<p><img src="https://trello-attachments.s3.amazonaws.com/5b4e5641c11f0aedbb38bf0b/5f073351eb6015649eae7b5c/b334bd4a4f6257f3a3036ca038730305/image.png" alt="xina help"></p>
+<pre class="prettyprint source"><code>@xina help: Display all available commands.
+@xina test smoke environment datacenter group: Run smoke tests.
+@xina help test smoke environment: Display all posible environments.
+@xina help test smoke datacenter: Display all posible datacenters.
+@xina help test smoke group: Display all posible groups.
+
+</code></pre>
+<h2>Metrics</h2>
+<p>After the smoke tests are launched, the results are sent to metrics for graphing, keep in mind that the DNS shown depends on the environment in which the smoke test was scheduled. There are two graphics boards:</p>
+<p><img src="https://trello-attachments.s3.amazonaws.com/5b4e5641c11f0aedbb38bf0b/5f073351eb6015649eae7b5c/5a53402a381b4b236e1bb7b41d64902c/image.png" alt="Smoke test dashboard">.</p>
+<h3>System Availability (Internal):</h3>
+<p>Shows metrics for smokes tests scheduled from the slack channel</p>
+<h3>System Availability (Geo-Balancing)</h3>
+<p>This feeds on the runs of the smoke tests scheduled automatically every 5 minutes in the on-frequence instances for each zone (east | west)</p>
+<p><img src="https://trello-attachments.s3.amazonaws.com/5b4e5641c11f0aedbb38bf0b/5f073351eb6015649eae7b5c/0bd26d5dab54b8e51873f28372e57f74/image.png" alt="Dashbard Geobalancing"></p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-accounts.html">accounts</a></li><li><a href="module-secure%2520-%2520bulkUploads_resolvers.html">secure - bulkUploads/resolvers</a></li><li><a href="module-secure%2520-%2520employee_resolvers.html">secure - employee/resolvers</a></li><li><a href="module-secure%2520-%2520employee_utils.html">secure - employee/utils</a></li><li><a href="module-secure%2520-%2520licenseVerification_resolvers.html">secure - licenseVerification/resolvers</a></li><li><a href="module-secure%2520-%2520positionRequirements_resolvers.html">secure - positionRequirements/resolvers</a></li><li><a href="module-secure%2520-%2520positionRequirements_utils.html">secure - positionRequirements/utils</a></li><li><a href="module-secure%2520-%2520prehire_resolvers.html">secure - prehire/resolvers</a></li><li><a href="module-secure%2520-%2520prehire_utils.html">secure - prehire/utils</a></li><li><a href="module-secure%2520-%2520reports_resolvers.html">secure - reports/resolvers</a></li><li><a href="module-secure%2520-%2520reports_utils.html">secure - reports/utils</a></li><li><a href="module-secure%2520-%2520utils.html">secure - utils</a></li><li><a href="module-utils.html">utils</a></li></ul><h3>Classes</h3><ul><li><a href="Puppeteer.html">Puppeteer</a></li><li><a href="Smoke.html">Smoke</a></li><li><a href="TestClient.html">TestClient</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.5</a> on Fri Sep 11 2020 21:30:58 GMT+0000 (Coordinated Universal Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
