@@ -10,7 +10,7 @@
     "opts": {
       "encoding": "utf8",
       "destination": "docs/",
-      "template": "./node_modules/clean-jsdoc-theme",
+      "template": "",
       "recurse": true,
       "verbose": true,
       "readme": "../../README.md",
