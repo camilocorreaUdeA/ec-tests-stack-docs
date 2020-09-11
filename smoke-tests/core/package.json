@@ -8,7 +8,7 @@
     "test:dev": "cross-env DEBUG_MODE=true NODE_ENV=development jest --verbose $GROUP",
     "test:test": "cross-env DEBUG_MODE=true NODE_ENV=test jest --verbose $GROUP",
     "test:demo": "cross-env DEBUG_MODE=true NODE_ENV=demo jest --verbose $GROUP",
-    "doc": "jsdoc -c conf.json README.md",
+    "doc": "jsdoc -c conf.json ../../README.md",
     "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
   },
   "jest": {
