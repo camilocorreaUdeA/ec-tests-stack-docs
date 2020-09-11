@@ -50,6 +50,7 @@ cache:
     - docs
     - .cache
 script:
+  - npm install
   - npm run doc # Generate documentation
 
 # Here is the magic part
