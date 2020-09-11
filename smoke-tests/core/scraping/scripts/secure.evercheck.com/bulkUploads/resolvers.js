@@ -28,7 +28,7 @@ const { existFile, sleep, deleteFile } = require('../../../../utils');
  * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
  * @returns {Boolean}
  * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
- * @summary 
+ * @summary Hello
  */
 const downloadAndCheckSummary = async ({ page, pendingXHR }) => {
   const folderName = 'downloads';
