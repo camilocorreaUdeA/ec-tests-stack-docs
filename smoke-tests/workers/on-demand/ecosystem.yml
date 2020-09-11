@@ -1,0 +1,12 @@
+apps:
+  ## On Demand
+  - name: 'on-demand'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      SEND_METRICS: false
+    env_production:
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true

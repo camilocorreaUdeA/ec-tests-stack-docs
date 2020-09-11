@@ -1,0 +1,45 @@
+{
+  "name": "core",
+  "version": "1.0.0",
+  "description": "Smoke tests core here",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env DEBUG_MODE=true NODE_ENV=production jest --verbose $GROUP",
+    "test:dev": "cross-env DEBUG_MODE=true NODE_ENV=development jest --verbose $GROUP",
+    "test:test": "cross-env DEBUG_MODE=true NODE_ENV=test jest --verbose $GROUP",
+    "test:demo": "cross-env DEBUG_MODE=true NODE_ENV=demo jest --verbose $GROUP",
+    "doc": "jsdoc -c conf.json README.md",
+    "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "<rootDir>/(lib|build|docs|node_modules)/"
+    ]
+  },
+  "author": "Condor Labs",
+  "license": "ISC",
+  "dependencies": {
+    "@condor-labs/helpers": "1.0.0",
+    "@condor-labs/metrics": "1.3.4",
+    "axios": "^0.19.2",
+    "chai": "4.2.0",
+    "clean-jsdoc-theme": "^2.2.11",
+    "cross-env": "7.0.2",
+    "dotenv": "8.2.0",
+    "glob": "7.1.6",
+    "jest": "26.0.1",
+    "jest-expect-message": "1.0.2",
+    "jest-puppeteer": "4.4.0",
+    "jsdoc": "^3.6.5",
+    "moment": "2.27.0",
+    "pending-xhr-puppeteer": "2.3.2",
+    "prettier": "2.0.5",
+    "puppeteer": "5.1.0",
+    "request-promise": "4.2.4",
+    "sinon": "8.0.4"
+  },
+  "engines": {
+    "node": "13.8.0"
+  }
+}

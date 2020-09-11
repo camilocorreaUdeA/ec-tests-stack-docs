@@ -1,0 +1,18 @@
+{
+  "name": "on_frequence",
+  "version": "1.0.0",
+  "description": "Cron Job worker to execute smoke test periodically",
+  "main": "index.js",
+  "scripts": {
+    "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
+  },
+  "author": "Condor Labs",
+  "license": "ISC",
+  "dependencies": {
+    "@condor-labs/metrics": "^1.3.4",
+    "cron": "^1.8.2",
+    "dotenv": "^8.2.0",
+    "prettier": "^2.0.5",
+    "uuidv4": "^6.1.0"
+  }
+}

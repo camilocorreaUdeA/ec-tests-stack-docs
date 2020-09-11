@@ -1,0 +1,41 @@
+Resources:
+  ApiGateway:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Name: ec-smoke-tests
+  ApiGatewayMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      AuthorizationType: NONE
+      HttpMethod: POST
+      MethodResponses:
+        - StatusCode: 200
+      Integration:
+        Type: AWS
+        Credentials: arn:aws:iam::469923126847:role/ec-smoke-tests
+        Uri:
+          Fn::Join:
+            - ''
+            - - 'arn:aws:apigateway:'
+              - 'us-east-1'
+              - ':sns:action/Publish'
+        IntegrationHttpMethod: POST
+        RequestParameters:
+          integration.request.querystring.TopicArn: 'method.request.body.topic'
+          integration.request.querystring.Message: 'method.request.body.message'
+          integration.request.querystring.MessageAttributes.entry.1.Name: 'method.request.body.messageAttributes.name'
+          integration.request.querystring.MessageAttributes.entry.1.Value.DataType: 'method.request.body.messageAttributes.dataType'
+          integration.request.querystring.MessageAttributes.entry.1.Value.StringValue: 'method.request.body.messageAttributes.type'
+        IntegrationResponses: #map all responses to a default response.
+          - StatusCode: 200
+      ResourceId: #attaching the POST method to the root resource of the API
+        Fn::GetAtt: [ApiGateway, RootResourceId]
+      RestApiId: !Ref ApiGateway
+  ApiGatewayDeployment:
+    Type: AWS::ApiGateway::Deployment
+    DependsOn: #without the depends on, the deployment is sometimes done before
+      #any operation is defined.
+      - ApiGatewayMethod
+    Properties:
+      RestApiId: !Ref ApiGateway
+      StageName: ${opt:stage,'dev'}

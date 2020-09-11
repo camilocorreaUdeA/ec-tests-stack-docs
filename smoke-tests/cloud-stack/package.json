@@ -1,0 +1,14 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "serverless": "^1.71.3"
+  },
+  "scripts": {
+    "deploy:dev": "serverless deploy",
+    "deploy:test": "serverless deploy --stage test",
+    "deploy:prod": "serverless deploy --stage prod"
+  }
+}

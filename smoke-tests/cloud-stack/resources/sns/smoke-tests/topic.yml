@@ -1,0 +1,6 @@
+Resources:
+  ECSmokeTestsTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      DisplayName: ec-smoke-tests
+      TopicName: ec-smoke-tests

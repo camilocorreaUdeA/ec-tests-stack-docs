@@ -1,0 +1,47 @@
+language: node_js
+dist: trusty
+branches:
+  only:
+      - master
+      - demo
+      - test
+
+notifications:
+  email: false
+cache:
+  directories:
+    - node_modules
+sudo: required
+node_js:
+  - '12.18'
+before_script: cd smoke-tests/core/
+
+script:
+  - npm run doc 
+
+
+env:
+  - GROUP=scraping.scripts.secure.evercheck.com.employee
+  - GROUP=scraping.scripts.secure.evercheck.com.licenseVerification
+  - GROUP=scraping.scripts.secure.evercheck.com.positionRequirement
+  - GROUP=scraping.scripts.secure.evercheck.com.prehire
+  - GROUP=scraping.scripts.secure.evercheck.com.reports
+
+  - GROUP=scraping.scripts.accounts.evercheck.com
+  - GROUP=scraping.scripts.education.evercheck.com
+  - GROUP=scraping.scripts.licenses.evercheck.com 
+  - GROUP=scraping.scripts.monitoring.evercheck.com
+  - GROUP=scraping.scripts.posthire.evercheck.com 
+  - GROUP=scraping.scripts.storage.evercheck.com
+  - GROUP=scraping.scripts.auth.evercheck.com
+  - GROUP=scraping.scripts.evercheck.com
+  - GROUP=scraping.scripts.lv.evercheck.com  
+  - GROUP=scraping.scripts.ocr.evercheck.com
+  - GROUP=scraping.scripts.prehire.evercheck.com
+  - GROUP=scraping.scripts.upload.evercheck.com
+  - GROUP=scraping.scripts.credentialing.evercheck.com
+  - GROUP=scraping.scripts.evercheckwallet.com
+  - GROUP=scraping.scripts.messagecenter.evercheck.com
+  - GROUP=scraping.scripts.payment.evercheck.com
+  - GROUP=scraping.scripts.workgroups.evercheck.com
+  - GROUP=scraping.scripts.user-upload.evercheck.com

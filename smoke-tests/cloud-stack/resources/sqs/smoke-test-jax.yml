@@ -1,0 +1,16 @@
+Resources:
+  SmokeTestJAX:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: ec-smoke-test-jax
+      VisibilityTimeout: 180
+  SmokeTestJAXPolices:
+    Type: AWS::SQS::QueuePolicy
+    Properties:
+      Queues: [!Ref 'SmokeTestJAX']
+      PolicyDocument:
+        Statement:
+          Effect: Allow
+          Principal: '*'
+          Action: ['sqs:*']
+          Resource: !GetAtt SmokeTestJAX.Arn

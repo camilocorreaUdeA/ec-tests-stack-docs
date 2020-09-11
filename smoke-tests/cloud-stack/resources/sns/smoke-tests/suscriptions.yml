@@ -1,0 +1,19 @@
+Resources:
+  ECSmoketestsJax:
+    Type: AWS::SNS::Subscription
+    Properties:
+      Endpoint: !GetAtt SmokeTestJAX.Arn
+      Protocol: sqs
+      TopicArn: !Ref ECSmokeTestsTopic
+      FilterPolicy:
+        event:
+          - JAX
+  ECSmoketestsBdu:
+    Type: AWS::SNS::Subscription
+    Properties:
+      Endpoint: !GetAtt SmokeTestBDU.Arn
+      Protocol: sqs
+      TopicArn: !Ref ECSmokeTestsTopic
+      FilterPolicy:
+        event:
+          - BDU

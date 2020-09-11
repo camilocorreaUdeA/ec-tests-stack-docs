@@ -1,0 +1,304 @@
+apps:
+  - name: 'accounts.evercheck.com'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      GROUP: 'accounts.evercheck.com'
+      NODE_ENV: 'test'
+      CRON_TIME: '*/5 * * * *'
+      DATACENTER: 'EAST'
+      SEND_METRICS: false
+    env_production:
+      NODE_ENV: production
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true
+
+  - name: 'auth.evercheck.com'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      GROUP: 'auth.evercheck.com'
+      NODE_ENV: 'test'
+      CRON_TIME: '*/5 * * * *'
+      DATACENTER: 'EAST'
+      SEND_METRICS: false
+    env_production:
+      NODE_ENV: production
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true
+
+  - name: 'messagecenter.evercheck.com'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      GROUP: 'messagecenter.evercheck.com'
+      NODE_ENV: 'test'
+      CRON_TIME: '*/5 * * * *'
+      DATACENTER: 'EAST'
+      SEND_METRICS: false
+    env_production:
+      NODE_ENV: production
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true
+
+  - name: 'prehire.evercheck.com'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      GROUP: 'prehire.evercheck.com'
+      NODE_ENV: 'test'
+      CRON_TIME: '*/5 * * * *'
+      DATACENTER: 'EAST'
+      SEND_METRICS: false
+    env_production:
+      NODE_ENV: production
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true
+
+  - name: 'credentialing.evercheck.com'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      GROUP: 'credentialing.evercheck.com'
+      NODE_ENV: 'test'
+      CRON_TIME: '*/5 * * * *'
+      DATACENTER: 'EAST'
+      SEND_METRICS: false
+    env_production:
+      NODE_ENV: production
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true
+
+  - name: 'education.evercheck.com'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      GROUP: 'education.evercheck.com'
+      NODE_ENV: 'test'
+      CRON_TIME: '*/5 * * * *'
+      DATACENTER: 'EAST'
+      SEND_METRICS: false
+    env_production:
+      NODE_ENV: production
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true
+
+  - name: 'lv.evercheck.com'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      GROUP: 'lv.evercheck.com'
+      NODE_ENV: 'test'
+      CRON_TIME: '*/5 * * * *'
+      DATACENTER: 'EAST'
+      SEND_METRICS: false
+    env_production:
+      NODE_ENV: production
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true
+
+  - name: 'evercheck.com'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      GROUP: 'evercheck.com'
+      NODE_ENV: 'test'
+      CRON_TIME: '*/5 * * * *'
+      DATACENTER: 'EAST'
+      SEND_METRICS: false
+    env_production:
+      NODE_ENV: production
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true
+
+  - name: 'monitoring.evercheck.com'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      GROUP: 'monitoring.evercheck.com'
+      NODE_ENV: 'test'
+      CRON_TIME: '*/5 * * * *'
+      DATACENTER: 'EAST'
+      SEND_METRICS: false
+    env_production:
+      NODE_ENV: production
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true
+
+  - name: 'evercheckwallet.com'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      GROUP: 'evercheckwallet.com'
+      NODE_ENV: 'test'
+      CRON_TIME: '*/5 * * * *'
+      DATACENTER: 'EAST'
+      SEND_METRICS: false
+    env_production:
+      NODE_ENV: production
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true
+
+  - name: 'ocr.evercheck.com'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      GROUP: 'ocr.evercheck.com'
+      NODE_ENV: 'test'
+      CRON_TIME: '*/5 * * * *'
+      DATACENTER: 'EAST'
+      SEND_METRICS: false
+    env_production:
+      NODE_ENV: production
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true
+
+  - name: 'secure.evercheck.com'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      GROUP: 'secure.evercheck.com'
+      NODE_ENV: 'test'
+      CRON_TIME: '*/5 * * * *'
+      DATACENTER: 'EAST'
+      SEND_METRICS: false
+    env_production:
+      NODE_ENV: production
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true
+
+  - name: 'licenses.evercheck.com'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      GROUP: 'licenses.evercheck.com'
+      NODE_ENV: 'test'
+      CRON_TIME: '*/5 * * * *'
+      DATACENTER: 'EAST'
+      SEND_METRICS: false
+    env_production:
+      NODE_ENV: production
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true
+
+  - name: 'payment.evercheck.com'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      GROUP: 'payment.evercheck.com'
+      NODE_ENV: 'test'
+      CRON_TIME: '*/5 * * * *'
+      DATACENTER: 'EAST'
+      SEND_METRICS: false
+    env_production:
+      NODE_ENV: production
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true
+
+  - name: 'storage.evercheck.com'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      GROUP: 'storage.evercheck.com'
+      NODE_ENV: 'test'
+      CRON_TIME: '*/5 * * * *'
+      DATACENTER: 'EAST'
+      SEND_METRICS: false
+    env_production:
+      NODE_ENV: production
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true
+
+  - name: 'workgroups.evercheck.com'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      GROUP: 'workgroups.evercheck.com'
+      NODE_ENV: 'test'
+      CRON_TIME: '*/5 * * * *'
+      DATACENTER: 'EAST'
+      SEND_METRICS: false
+    env_production:
+      NODE_ENV: production
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true
+
+  - name: 'posthire.evercheck.com'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      GROUP: 'posthire.evercheck.com'
+      NODE_ENV: 'test'
+      CRON_TIME: '*/5 * * * *'
+      DATACENTER: 'EAST'
+      SEND_METRICS: false
+    env_production:
+      NODE_ENV: production
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true
+
+  - name: 'upload.evercheck.com'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      GROUP: 'upload.evercheck.com'
+      NODE_ENV: 'test'
+      CRON_TIME: '*/5 * * * *'
+      DATACENTER: 'EAST'
+      SEND_METRICS: false
+    env_production:
+      NODE_ENV: production
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true
+
+  - name: 'user-upload.evercheck.com'
+    script: ./index.js
+    log_date_format: 'YYYY-MM-DD HH:mm:ss'
+    max_memory_restart: 400M
+    env:
+      GROUP: 'user-upload.evercheck.com'
+      NODE_ENV: 'test'
+      CRON_TIME: '*/5 * * * *'
+      DATACENTER: 'EAST'
+      SEND_METRICS: false
+    env_production:
+      NODE_ENV: production
+      SEND_METRICS: true
+    env_test:
+      SEND_METRICS: true

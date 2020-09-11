@@ -1,0 +1,16 @@
+Resources:
+  SmokeTestBDU:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: ec-smoke-test-bdu
+      VisibilityTimeout: 180
+  SmokeTestBDUPolices:
+    Type: AWS::SQS::QueuePolicy
+    Properties:
+      Queues: [!Ref 'SmokeTestBDU']
+      PolicyDocument:
+        Statement:
+          Effect: Allow
+          Principal: '*'
+          Action: ['sqs:*']
+          Resource: !GetAtt SmokeTestBDU.Arn
