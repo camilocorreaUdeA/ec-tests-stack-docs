@@ -1,1 +1,0 @@
-# ec-tests-stack-docs
