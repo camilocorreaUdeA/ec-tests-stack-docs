@@ -7,7 +7,7 @@ cache:
   directories:
     - docs
     - .cache    
-before_script: cd smoke-tests/core/
+before_script: cd smoke-tests/
 
 script:
   - npm install
@@ -20,7 +20,7 @@ deploy:
     # Keep builded pages
     skip-cleanup: true
     # Directory where your generated files are located
-    local_dir: smoke-tests/core/docs
+    local_dir: smoke-tests/docs
     # Github security/auth token
     github-token: $GITHUB_TOKEN
     # Incremental commit to keep old build/files from previous deployments
@@ -29,4 +29,4 @@ deploy:
     target_branch: gh-pages
     on:
       # Which branch on commit/push will trigger deployment
-      branch: master
+      branch: test
