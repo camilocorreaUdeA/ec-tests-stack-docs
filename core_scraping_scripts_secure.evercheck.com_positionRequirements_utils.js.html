@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Smoke</title>
+    <title>core/scraping/scripts/secure.evercheck.com/positionRequirements/utils.js</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -47,758 +47,222 @@
 
 <div id="main">
     
-    <h1 class="page-title">Smoke</h1>
-    
-
-    
-
-
-
-
-<section>
-
-
-<header>
-    
-        
-        <h2>
-        
-        Smoke
-        
-        </h2>
-        
-        
-            <div class="class-description"><p>Smoke Test class, contain methods: getTestFolderDetails, updateSuiteResultsKeys, updateGroupsByEnvironment and executeTest</p></div>
-            <hr/>
-        
-    
-</header>
-
-
-<article>
-    <div class="container-overview">
-    
-        
-
-    
-        <h2>Constructor</h2>
-    
-
-    <h4 class="name" id="Smoke"><span class="type-signature"></span>new Smoke<span class="signature">(datacenter, env, group)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
-        <strong>Parameters:</strong>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>datacenter</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>JAX|BDU</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>env</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>test|demo|production</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>group</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>auth.evercheck.com .....</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line9">line 9</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    <h4 class="name" id="executeTest"><span class="type-signature">(async) </span>executeTest<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-        <p class="summary"><p>This function executes the smoke tests, collects metrics and returns the results</p></p>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line111">line 111</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <p>smoke tests results</p>
-</div>
-
-
- 
-    </div>
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="getTestFolderDetails"><span class="type-signature">(async) </span>getTestFolderDetails<span class="signature">()</span><span class="type-signature"> &rarr; {Object}</span></h4>
-
-    
-        <p class="summary"><p>This function returns an object with two keys groupTestFolder key and globalTestFolder key</p></p>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line31">line 31</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <p>Object with the folders that contain the tests to be executed</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
- 
-    </div>
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="updateGroupsByEnvironment"><span class="type-signature">(async) </span>updateGroupsByEnvironment<span class="signature">(group)</span><span class="type-signature"> &rarr; {String}</span></h4>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
-        <strong>Parameters:</strong>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>group</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>group or groups to execute the smoke tests</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line68">line 68</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <ul>
-<li>group</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">String</span>
-
-
-    </dd>
-</dl>
- 
-    </div>
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="updateSuiteResultsKeys"><span class="type-signature">(async) </span>updateSuiteResultsKeys<span class="signature">(formatResult)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-
-    
-        <p class="summary"><p>This function returns an object with the smoke tests results but replacing http with https</p></p>
-    
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
-        <strong>Parameters:</strong>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>formatResult</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>smoke tests results</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line51">line 51</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <ul>
-<li>Object with maped smoke tests results</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
- 
-    </div>
-
-
-
-
-        
-    
-
-    
-
-    
-</article>
-
-</section>
+    <h1 class="page-title">core/scraping/scripts/secure.evercheck.com/positionRequirements/utils.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module secure - positionRequirements/utils
+ */
+const { chatAssistantExist, hideChatAssistant } = require('../utils');
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
+ * @returns {Boolean}
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Helper function to add a position requirement by filling the requirements form
+ */
+const fillRequirement = async (
+  { page },
+  typeRequirement = {},
+  stateOrBoard = {},
+  profession = {}
+) => {
+  let response = {
+    errorMessage: '',
+    success: true
+  };
+  if (await chatAssistantExist({ page })) await hideChatAssistant({ page });
+  await page.waitForSelector(typeRequirement.tagSelect);
+  await page.click(typeRequirement.tagSelect);
+  await page.waitFor(1000);
+  await page.waitForSelector(typeRequirement.tagOptions);
+  const isSelectedLicensed = await page.evaluate(typeRequirement => {
+    const listOptionsTypes = document.querySelectorAll(typeRequirement.tagOptions);
+    for (const optionType of listOptionsTypes) {
+      const optionTypesText = optionType ? optionType.innerText : '';
+      if (optionTypesText.includes(typeRequirement.name)) {
+        optionType.querySelector('a').click();
+        return true;
+      }
+    }
+  }, typeRequirement);
+  if (!isSelectedLicensed) {
+    response.errorMessage = 'Error while select requirement type';
+    response.success = false;
+    return response;
+  }
+  await page.waitForSelector(stateOrBoard.tagSelect);
+  await page.click(stateOrBoard.tagSelect);
+  await page.waitForSelector(stateOrBoard.tagSearch);
+  await page.type(stateOrBoard.tagSearch, stateOrBoard.name, {
+    delay: 50
+  });
+  await page.waitFor(1000);
+  await page.waitForSelector(stateOrBoard.options);
+  const isSelectedStateOrBoard = await page.evaluate(stateOrBoard => {
+    const options = document.querySelectorAll(stateOrBoard.options);
+    for (const option of options) {
+      const optionsText = option ? option.textContent : '';
+      if (optionsText.includes(stateOrBoard.name)) {
+        option.querySelector('p').click();
+        return true;
+      }
+    }
+  }, stateOrBoard);
+  if (!isSelectedStateOrBoard) {
+    response.errorMessage = 'Error while select state or board';
+    response.success = false;
+    return response;
+  }
+  await page.waitForSelector(profession.tagSelect);
+  await page.waitFor(1500);
+  await page.click(profession.tagSelect);
+  await page.waitFor(1500);
+  await page.waitForSelector(profession.tagSearch);
+  await page.click(profession.tagSearch);
+  await page.waitFor(1500);
+  await page.type(profession.tagSearch, profession.name, {
+    delay: 50
+  });
+  await page.waitFor(1500);
+  const isSelectedPofession = await page.evaluate(profession => {
+    const options = document.querySelectorAll(profession.options);
+    for (const option of options) {
+      const optionsText = option ? option.textContent : '';
+      if (optionsText.includes(profession.name)) {
+        option.querySelector('p').click();
+        return true;
+      }
+    }
+  }, profession);
+  if (!isSelectedPofession) {
+    response.errorMessage = 'Error while select profession';
+    response.success = false;
+    return response;
+  }
+  return response;
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {String} selector-page selector
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Click on specified selector in requirements form
+ */
+const andRequirementsBtn = async ({ page }, btnTag) => {
+  await page.waitForSelector(btnTag);
+  await page.click(btnTag);
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {String} selector-page selector
+ * @param {String} selector-page selector
+ * @param {String} text-selector text
+ * @returns {Boolean}
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Click button selector, then click on options menu and click specified option
+ */
+const chooseOptionBtnMore = async ({ page }, btnTag, optionsTag, textToChoose) => {
+  await page.waitForSelector(btnTag);
+  await page.click(btnTag);
+  await page.waitForSelector(optionsTag);
+  return await page.evaluate(
+    (optionsTag, textToChoose) => {
+      const options = document.querySelectorAll(optionsTag);
+      for (const option of options) {
+        const optionText = option ? option.textContent : '';
+        if (optionText.includes(textToChoose)) {
+          option.querySelector('a').click();
+          return true;
+        }
+      }
+    },
+    optionsTag,
+    textToChoose
+  );
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {String} selector-page selector
+ * @param {String} text-selector text
+ * @returns {Boolean}
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Click on options menu and click specified option
+ */
+const chooseRequirementsOptions = async (
+  { page },
+  listRequirementTag,
+  optionToChoose
+) => {
+  await page.waitForSelector(listRequirementTag);
+  return await page.evaluate(
+    (optionToChoose, listRequirementTag) => {
+      const options = document.querySelectorAll(listRequirementTag);
+      for (const option of options) {
+        const optionText = option ? option.innerText : '';
+        if (optionText === optionToChoose) {
+          option.querySelector('a').click();
+          return true;
+        }
+      }
+    },
+    optionToChoose,
+    listRequirementTag
+  );
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {String} selector-page selector
+ * @param {String} text-selector text
+ * @returns {number}
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Click on options menu and check if a specified option exists and return the option's order number
+ */
+const getWorkgroupPosition = async ({ page }, optionsWorkGroups, workGroupToChoose) => {
+  return await page.evaluate(
+    (optionsWorkGroups, workGroupToChoose) => {
+      let options = document.querySelectorAll(optionsWorkGroups);
+      for (const [i, option] of options.entries()) {
+        let optionText = option ? option.innerText : '';
+        if (optionText.includes(workGroupToChoose)) return i + 1;
+      }
+    },
+    optionsWorkGroups,
+    workGroupToChoose
+  );
+};
+
+module.exports = {
+  fillRequirement,
+  andRequirementsBtn,
+  chooseOptionBtnMore,
+  getWorkgroupPosition,
+  chooseRequirementsOptions
+};
+</code></pre>
+        </article>
+    </section>
 
 
 

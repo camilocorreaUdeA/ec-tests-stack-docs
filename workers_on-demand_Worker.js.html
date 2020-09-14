@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Smoke</title>
+    <title>workers/on-demand/Worker.js</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -47,758 +47,92 @@
 
 <div id="main">
     
-    <h1 class="page-title">Smoke</h1>
-    
-
-    
-
-
-
-
-<section>
-
-
-<header>
-    
-        
-        <h2>
-        
-        Smoke
-        
-        </h2>
-        
-        
-            <div class="class-description"><p>Smoke Test class, contain methods: getTestFolderDetails, updateSuiteResultsKeys, updateGroupsByEnvironment and executeTest</p></div>
-            <hr/>
-        
-    
-</header>
-
-
-<article>
-    <div class="container-overview">
-    
-        
-
-    
-        <h2>Constructor</h2>
-    
-
-    <h4 class="name" id="Smoke"><span class="type-signature"></span>new Smoke<span class="signature">(datacenter, env, group)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
-        <strong>Parameters:</strong>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>datacenter</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>JAX|BDU</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>env</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>test|demo|production</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>group</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>auth.evercheck.com .....</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line9">line 9</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    <h4 class="name" id="executeTest"><span class="type-signature">(async) </span>executeTest<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-        <p class="summary"><p>This function executes the smoke tests, collects metrics and returns the results</p></p>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line111">line 111</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <p>smoke tests results</p>
-</div>
-
-
- 
-    </div>
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="getTestFolderDetails"><span class="type-signature">(async) </span>getTestFolderDetails<span class="signature">()</span><span class="type-signature"> &rarr; {Object}</span></h4>
-
-    
-        <p class="summary"><p>This function returns an object with two keys groupTestFolder key and globalTestFolder key</p></p>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line31">line 31</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <p>Object with the folders that contain the tests to be executed</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
- 
-    </div>
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="updateGroupsByEnvironment"><span class="type-signature">(async) </span>updateGroupsByEnvironment<span class="signature">(group)</span><span class="type-signature"> &rarr; {String}</span></h4>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
-        <strong>Parameters:</strong>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>group</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>group or groups to execute the smoke tests</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line68">line 68</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <ul>
-<li>group</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">String</span>
-
-
-    </dd>
-</dl>
- 
-    </div>
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="updateSuiteResultsKeys"><span class="type-signature">(async) </span>updateSuiteResultsKeys<span class="signature">(formatResult)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-
-    
-        <p class="summary"><p>This function returns an object with the smoke tests results but replacing http with https</p></p>
-    
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
-        <strong>Parameters:</strong>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>formatResult</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>smoke tests results</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line51">line 51</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <ul>
-<li>Object with maped smoke tests results</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
- 
-    </div>
-
-
-
-
-        
-    
-
-    
-
-    
-</article>
-
-</section>
+    <h1 class="page-title">workers/on-demand/Worker.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const SQS = require('@condor-labs/sqs');
+const { Smoke } = require('../../core/helpers');
+const { sendSlackNotification } = require('./../../core/helpers/slack');
+const generadorUuId = require('uuidv4');
+const { error, info } = require('../../core/helpers/logger');
+const projectInfo = require('./package.json');
+const { name: workerType } = projectInfo;
+
+/**
+ * @class Worker
+ * @constructor
+ * @param {Object} pollParams - {
+ *      queueUrl: sqs url,
+        isCallback: false by default,
+        batchSize: sqs batch size,
+        waitTimeSeconds: sqs wait time in seconds,
+        visibilityTimeout: sqs visibility timeout
+    }
+ * @param {Object} credentials - {
+        accessKeyId: aws access key id,
+        secretAccessKey: aws access key,
+        region: aws region
+    }
+ * @classdesc Worker class for on-demand tests, contains methods to poll SQS, execute tests and send results back to slack
+ */
+class Worker {
+  constructor(pollParams, credentials) {
+    this.pollParams = pollParams;
+    this.credentials = credentials;
+  }
+
+  /**
+   * @method
+   * @async
+   * @param {String} message
+   * @summary Execute smoke tests and send results back to slack channel
+   */
+  async processMessages(message) {
+    try {
+      const { datacenter, env, group } = JSON.parse(message['Message']);
+      const smokeTest = new Smoke(datacenter, env, group, workerType);
+      const testResults = await smokeTest.executeTest();
+      const uuid = generadorUuId.uuid();
+      const params = {
+        environment: env,
+        datacenter: datacenter,
+        uuid
+      };
+      info({ uuid, datacenter, ...testResults });
+      if (testResults) await sendSlackNotification(testResults, params);
+    } catch (e) {
+      error(e);
+    }
+  }
+
+  /**
+   * @method
+   * @summary Pull message from SQS and execute requested tests
+   */
+  setPollhandler() {
+    this.pollParams.pollHandler = this.processMessages;
+  }
+
+  /**
+   * @method
+   * @summary Set connection to SQS
+   */
+  pollQueue() {
+    SQS.poll(this.pollParams, this.credentials);
+  }
+}
+
+module.exports = Worker;
+</code></pre>
+        </article>
+    </section>
 
 
 

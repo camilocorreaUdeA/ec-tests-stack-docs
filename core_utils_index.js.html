@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Smoke</title>
+    <title>core/utils/index.js</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -47,758 +47,199 @@
 
 <div id="main">
     
-    <h1 class="page-title">Smoke</h1>
-    
-
-    
-
-
-
-
-<section>
-
-
-<header>
-    
-        
-        <h2>
-        
-        Smoke
-        
-        </h2>
-        
-        
-            <div class="class-description"><p>Smoke Test class, contain methods: getTestFolderDetails, updateSuiteResultsKeys, updateGroupsByEnvironment and executeTest</p></div>
-            <hr/>
-        
-    
-</header>
-
-
-<article>
-    <div class="container-overview">
-    
-        
-
-    
-        <h2>Constructor</h2>
-    
-
-    <h4 class="name" id="Smoke"><span class="type-signature"></span>new Smoke<span class="signature">(datacenter, env, group)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
-        <strong>Parameters:</strong>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>datacenter</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>JAX|BDU</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>env</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>test|demo|production</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>group</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>auth.evercheck.com .....</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line9">line 9</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    <h4 class="name" id="executeTest"><span class="type-signature">(async) </span>executeTest<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-        <p class="summary"><p>This function executes the smoke tests, collects metrics and returns the results</p></p>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line111">line 111</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <p>smoke tests results</p>
-</div>
-
-
- 
-    </div>
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="getTestFolderDetails"><span class="type-signature">(async) </span>getTestFolderDetails<span class="signature">()</span><span class="type-signature"> &rarr; {Object}</span></h4>
-
-    
-        <p class="summary"><p>This function returns an object with two keys groupTestFolder key and globalTestFolder key</p></p>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line31">line 31</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <p>Object with the folders that contain the tests to be executed</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
- 
-    </div>
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="updateGroupsByEnvironment"><span class="type-signature">(async) </span>updateGroupsByEnvironment<span class="signature">(group)</span><span class="type-signature"> &rarr; {String}</span></h4>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
-        <strong>Parameters:</strong>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>group</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>group or groups to execute the smoke tests</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line68">line 68</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <ul>
-<li>group</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">String</span>
-
-
-    </dd>
-</dl>
- 
-    </div>
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="updateSuiteResultsKeys"><span class="type-signature">(async) </span>updateSuiteResultsKeys<span class="signature">(formatResult)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-
-    
-        <p class="summary"><p>This function returns an object with the smoke tests results but replacing http with https</p></p>
-    
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
-        <strong>Parameters:</strong>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>formatResult</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>smoke tests results</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line51">line 51</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <ul>
-<li>Object with maped smoke tests results</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
- 
-    </div>
-
-
-
-
-        
-    
-
-    
-
-    
-</article>
-
-</section>
+    <h1 class="page-title">core/utils/index.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module utils
+ */
+const fs = require('fs');
+
+const sleep = miliseconds => new Promise(resolve => setTimeout(resolve, miliseconds));
+
+const existFile = filePath => fs.existsSync(filePath);
+
+const deleteFile = filePath => fs.unlinkSync(filePath);
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {String} selector - page selector
+ * @param {String} text - text in selector
+ * @returns {Boolean}
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Checks if the text to search matches any option in the filter
+ */
+const checkFilter = async ({ page }, tagOptions, textToSearch) => {
+  return await page.evaluate(
+    (tagOptions, textToSearch) => {
+      const options = document.querySelectorAll(tagOptions);
+      for (const option of options) {
+        const optionText = option ? option.innerText : '';
+        if (optionText.trim() === textToSearch.trim()) return true;
+      }
+    },
+    tagOptions,
+    textToSearch
+  );
+};
+
+/**
+ * @function
+ * @param {String[]} Array
+ * @param {String[]} Array
+ * @returns {Boolean}
+ * @summary Checks if two arrays contain the same elements
+ */
+const isArrayEquals = (a, b) => {
+  a = a.sort();
+  b = b.sort();
+  return (
+    Array.isArray(a) &amp;&amp;
+    Array.isArray(b) &amp;&amp;
+    a.length === b.length &amp;&amp;
+    a.every((val, index) => val === b[index])
+  );
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {String} selector - page selector
+ * @returns {Boolean}
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Waits for selector ad checks if it has any text content
+ */
+const waitForTextInList = async ({ page }, tagList) => {
+  return await page.waitForFunction(
+    tagList => {
+      const positionList = document.querySelectorAll(tagList);
+      for (const position of positionList) {
+        let positionText = position ? position.textContent : '';
+        if (positionText !== '') return true;
+      }
+    },
+    { waitUntil: 'load' },
+    tagList
+  );
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {String} selector - page selector
+ * @param {String} selector - page selector
+ * @param {String} text - selector text
+ * @returns {Boolean}
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Checks a match with text content in specified selector and clicks an option in filter
+ */
+const checkFilerAndClickFromList = async (
+  { page },
+  tagOptions,
+  tagToClick,
+  textToSearch
+) => {
+  await page.waitForSelector(tagOptions);
+  return await page.evaluate(
+    (tagOptions, tagToClick, textToSearch) => {
+      const options = document.querySelectorAll(tagOptions);
+      for (const option of options) {
+        const optionText = option ? option.innerText : '';
+        if (optionText.trim().includes(textToSearch.trim())) {
+          option.querySelector(tagToClick).click();
+          return true;
+        }
+      }
+    },
+    tagOptions,
+    tagToClick,
+    textToSearch
+  );
+};
+
+/**
+ * @function
+ * @param {number}
+ * @returns {Boolean}
+ * @summary Checks if a number has decimal places
+ */
+const containDecimal = number => {
+  const result = number - Math.floor(number) !== 0;
+  return result ? true : false;
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {String} selector - page selector
+ * @param {String} text - selector text
+ * @returns {Boolean}
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Waits for selector to be rendered and checks a match with its text content
+ */
+const waitTextContentInSelector = async ({ page }, selector, text) => {
+  return await page.waitForFunction(
+    (selector, text) => {
+      const findSelector = document.querySelector(selector);
+      if (!findSelector) return;
+      if (!findSelector) return 'Requested selector not found';
+      const selectorText = findSelector.textContent;
+      return selectorText.includes(text);
+    },
+    { waitUntil: 'load' },
+    selector,
+    text
+  );
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {String} selector - page selector
+ * @returns {Boolean}
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Waits for selector to be rendered and checks it it has a text content
+ */
+const waitTextExistsInSelector = async ({ page }, selector) => {
+  return await page.waitForFunction(
+    selector => {
+      let resutls = document.querySelector(selector);
+      const foundText = resutls ? resutls.textContent : '';
+      return foundText.length > 1;
+    },
+    {},
+    selector
+  );
+};
+
+module.exports = {
+  sleep,
+  existFile,
+  deleteFile,
+  checkFilter,
+  isArrayEquals,
+  containDecimal,
+  waitForTextInList,
+  checkFilerAndClickFromList,
+  waitTextContentInSelector,
+  waitTextExistsInSelector
+};
+</code></pre>
+        </article>
+    </section>
 
 
 

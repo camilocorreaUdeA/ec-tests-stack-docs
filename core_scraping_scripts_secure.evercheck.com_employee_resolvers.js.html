@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Smoke</title>
+    <title>core/scraping/scripts/secure.evercheck.com/employee/resolvers.js</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -47,758 +47,438 @@
 
 <div id="main">
     
-    <h1 class="page-title">Smoke</h1>
-    
-
-    
-
-
-
-
-<section>
-
-
-<header>
-    
-        
-        <h2>
-        
-        Smoke
-        
-        </h2>
-        
-        
-            <div class="class-description"><p>Smoke Test class, contain methods: getTestFolderDetails, updateSuiteResultsKeys, updateGroupsByEnvironment and executeTest</p></div>
-            <hr/>
-        
-    
-</header>
-
-
-<article>
-    <div class="container-overview">
-    
-        
-
-    
-        <h2>Constructor</h2>
-    
-
-    <h4 class="name" id="Smoke"><span class="type-signature"></span>new Smoke<span class="signature">(datacenter, env, group)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
-        <strong>Parameters:</strong>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>datacenter</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>JAX|BDU</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>env</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>test|demo|production</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>group</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>auth.evercheck.com .....</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line9">line 9</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    <h4 class="name" id="executeTest"><span class="type-signature">(async) </span>executeTest<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-        <p class="summary"><p>This function executes the smoke tests, collects metrics and returns the results</p></p>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line111">line 111</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <p>smoke tests results</p>
-</div>
-
-
- 
-    </div>
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="getTestFolderDetails"><span class="type-signature">(async) </span>getTestFolderDetails<span class="signature">()</span><span class="type-signature"> &rarr; {Object}</span></h4>
-
-    
-        <p class="summary"><p>This function returns an object with two keys groupTestFolder key and globalTestFolder key</p></p>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line31">line 31</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <p>Object with the folders that contain the tests to be executed</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
- 
-    </div>
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="updateGroupsByEnvironment"><span class="type-signature">(async) </span>updateGroupsByEnvironment<span class="signature">(group)</span><span class="type-signature"> &rarr; {String}</span></h4>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
-        <strong>Parameters:</strong>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>group</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>group or groups to execute the smoke tests</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line68">line 68</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <ul>
-<li>group</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">String</span>
-
-
-    </dd>
-</dl>
- 
-    </div>
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="updateSuiteResultsKeys"><span class="type-signature">(async) </span>updateSuiteResultsKeys<span class="signature">(formatResult)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-
-    
-        <p class="summary"><p>This function returns an object with the smoke tests results but replacing http with https</p></p>
-    
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
-        <strong>Parameters:</strong>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>formatResult</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>smoke tests results</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line51">line 51</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <ul>
-<li>Object with maped smoke tests results</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
- 
-    </div>
-
-
-
-
-        
-    
-
-    
-
-    
-</article>
-
-</section>
+    <h1 class="page-title">core/scraping/scripts/secure.evercheck.com/employee/resolvers.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module secure - employee/resolvers
+ */
+const { config } = require(`./../_config/${process.env.NODE_ENV}.config`);
+const {
+  SELECTORS: {
+    ITEM_FOUND,
+    ITEM_NOT_FOUND,
+    ICON_SEARCH_TOP,
+    INPUT_SEARCH_EMPLOYEES,
+    INPUT_SEARCH_TOP,
+    ITEM_FOUND_TOP,
+    ICON_CLEAR_TOP,
+    ITEM_NOT_FOUND_TOP,
+    EMPLOYEES_ROW,
+    POSITIONS_TITLE,
+    POSITIONS_ROW
+  },
+  MESSAGES: { EMPLOYEE_NOT_FOUND, TITLE_NOT_CORRECT, POS_ROW_EMPTY }
+} = require('./constants');
+
+const {
+  waitEmployeeByParams,
+  checkRequestedDataFound,
+  setSelectorEmptyAndTypeInfo,
+  waitSelectorTextIsNotEmpty,
+  waitTitleText,
+  positionsExist
+} = require('./utils');
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
+ * @returns {Boolean} Boolean
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Go to employee section, type the employee name in the search panel, wait for response and evaluate the results obtained.
+ */
+const byName = async ({ page, pendingXHR }) => {
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitForSelector(INPUT_SEARCH_EMPLOYEES);
+  await page.type(INPUT_SEARCH_EMPLOYEES, config.NAME_EMPLOYEE_SEARCH);
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitFor(500);
+
+  const foundEmployee = await waitEmployeeByParams(
+    { page },
+    ITEM_NOT_FOUND,
+    ITEM_FOUND,
+    config.ID_EMPLOYER_NUMBER_SEARCH,
+    'No data found'
+  );
+
+  if (!foundEmployee) return EMPLOYEE_NOT_FOUND;
+
+  const dataFound = await checkRequestedDataFound(
+    { page },
+    ITEM_FOUND,
+    config.ID_EMPLOYER_NUMBER_SEARCH
+  );
+
+  return dataFound;
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
+ * @returns {Boolean} Boolean
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Go to employee section, type the employee name in the top serach bar, wait for response and evaluate the results obtained.
+ */
+const byNameTop = async ({ page, pendingXHR }) => {
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitForSelector(ICON_SEARCH_TOP);
+  await page.click(ICON_SEARCH_TOP);
+  await page.waitForSelector(INPUT_SEARCH_TOP);
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitFor(1500);
+  const filter = async () => {
+    await setSelectorEmptyAndTypeInfo(
+      { page },
+      INPUT_SEARCH_TOP,
+      config.NAME_EMPLOYEE_SEARCH
+    );
+    await pendingXHR.waitForAllXhrFinished();
+    await page.waitFor(3000);
+
+    const foundEmployee = await waitEmployeeByParams(
+      { page },
+      ITEM_NOT_FOUND_TOP,
+      ITEM_FOUND_TOP,
+      config.NAME_EMPLOYEE_SEARCH,
+      'No results found'
+    );
+
+    if (!foundEmployee) return EMPLOYEE_NOT_FOUND;
+
+    const dataFound = await checkRequestedDataFound(
+      { page },
+      ITEM_FOUND_TOP,
+      config.NAME_EMPLOYEE_SEARCH
+    );
+
+    return dataFound;
+  };
+
+  let attemps = 1;
+  let isFound = await filter();
+  while (!isFound &amp;&amp; attemps &lt;= 5) {
+    isFound = await filter();
+    attemps++;
+  }
+
+  await page.click(ICON_CLEAR_TOP);
+  return isFound;
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
+ * @returns {Boolean} Boolean
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Go to employee section, type the employee id number in the search panel, wait for response and evaluate the results obtained.
+ */
+const byIdEmployeeNumber = async ({ page, pendingXHR }) => {
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitForSelector(INPUT_SEARCH_EMPLOYEES);
+  await page.type(INPUT_SEARCH_EMPLOYEES, config.ID_EMPLOYER_NUMBER_SEARCH);
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitFor(1500);
+
+  const foundEmployee = await waitEmployeeByParams(
+    { page },
+    ITEM_NOT_FOUND,
+    ITEM_FOUND,
+    config.ID_EMPLOYER_NUMBER_SEARCH,
+    'No data found'
+  );
+
+  if (!foundEmployee) return EMPLOYEE_NOT_FOUND;
+
+  const dataFound = await checkRequestedDataFound(
+    { page },
+    ITEM_FOUND,
+    config.ID_EMPLOYER_NUMBER_SEARCH
+  );
+
+  return dataFound;
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
+ * @returns {Boolean} Boolean
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Go to employee section, type the employee id number in the top search bar, wait for response and evaluate the results obtained.
+ */
+const byIdEmployeeNumberTop = async ({ page, pendingXHR }) => {
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitForSelector(ICON_SEARCH_TOP);
+  await page.click(ICON_SEARCH_TOP);
+  await page.waitForSelector(INPUT_SEARCH_TOP);
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitFor(1500);
+
+  const filter = async () => {
+    await setSelectorEmptyAndTypeInfo(
+      { page },
+      INPUT_SEARCH_TOP,
+      config.ID_EMPLOYER_NUMBER_SEARCH
+    );
+    await pendingXHR.waitForAllXhrFinished();
+    await page.waitFor(1500);
+
+    const foundEmployee = await waitEmployeeByParams(
+      { page },
+      ITEM_NOT_FOUND,
+      ITEM_FOUND,
+      config.NAME_EMPLOYEE_SEARCH,
+      'No results found'
+    );
+
+    if (!foundEmployee) return EMPLOYEE_NOT_FOUND;
+
+    const dataFound = await checkRequestedDataFound(
+      { page },
+      ITEM_FOUND_TOP,
+      config.NAME_EMPLOYEE_SEARCH
+    );
+
+    return dataFound;
+  };
+
+  let attemps = 1;
+  let isFound = await filter();
+  while (!isFound &amp;&amp; attemps &lt;= 5) {
+    isFound = await filter();
+    attemps++;
+  }
+
+  await page.click(ICON_CLEAR_TOP);
+  return isFound;
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
+ * @returns {Boolean} Boolean
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Go to employee section, type the employee license number in the search panel, wait for response and evaluate the results obtained.
+ */
+const byLCR = async ({ page, pendingXHR }) => {
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitForSelector(INPUT_SEARCH_EMPLOYEES);
+  await page.type(INPUT_SEARCH_EMPLOYEES, config.LRC_EMPLOYEE_SEARCH);
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitFor(1500);
+
+  const foundEmployee = await waitEmployeeByParams(
+    { page },
+    ITEM_NOT_FOUND,
+    ITEM_FOUND,
+    config.ID_EMPLOYER_NUMBER_SEARCH,
+    'No data found'
+  );
+
+  if (!foundEmployee) return EMPLOYEE_NOT_FOUND;
+
+  const dataFound = await checkRequestedDataFound(
+    { page },
+    ITEM_FOUND,
+    config.ID_EMPLOYER_NUMBER_SEARCH
+  );
+
+  return dataFound;
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
+ * @returns {Boolean} Boolean
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Go to employee section, type the employee license number in the top search bar, wait for response and evaluate the results obtained.
+ */
+const byLCRTop = async ({ page, pendingXHR }) => {
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitForSelector(ICON_SEARCH_TOP);
+  await page.click(ICON_SEARCH_TOP);
+  await page.waitForSelector(INPUT_SEARCH_TOP);
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitFor(1500);
+
+  const filter = async () => {
+    await setSelectorEmptyAndTypeInfo(
+      { page },
+      INPUT_SEARCH_TOP,
+      config.LRC_EMPLOYEE_SEARCH
+    );
+    await pendingXHR.waitForAllXhrFinished();
+    await page.waitFor(1500);
+
+    const foundEmployee = await waitEmployeeByParams(
+      { page },
+      ITEM_NOT_FOUND_TOP,
+      ITEM_FOUND_TOP,
+      config.NAME_EMPLOYEE_SEARCH,
+      'No results found'
+    );
+
+    if (!foundEmployee) return EMPLOYEE_NOT_FOUND;
+
+    const dataFound = await checkRequestedDataFound(
+      { page },
+      ITEM_FOUND_TOP,
+      config.NAME_EMPLOYEE_SEARCH
+    );
+
+    return dataFound;
+  };
+
+  let attemps = 1;
+  let isFound = await filter();
+  while (!isFound &amp;&amp; attemps &lt;= 5) {
+    isFound = await filter();
+    attemps++;
+  }
+
+  await page.click(ICON_CLEAR_TOP);
+  return isFound;
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
+ * @returns {Boolean} Boolean
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Go to employee section, click on employee profiles and wait until position requirements panel is loaded.
+ */
+const loadPositionRequirements = async ({ page, pendingXHR }) => {
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitForFunction(
+    EMPLOYEES_ROW => {
+      const employeeList = document.querySelectorAll(EMPLOYEES_ROW);
+      for (const employee of employeeList) {
+        let rowText = employee ? employee.textContent : '';
+        if (rowText !== '') {
+          employee.querySelector('td > div > div > a').click();
+          return true;
+        }
+      }
+    },
+    { waitUntil: 'load' },
+    EMPLOYEES_ROW
+  );
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitFor(2500);
+  const isTitleCorrect = waitTitleText({ page }, POSITIONS_TITLE, 'Current positions');
+  if (!isTitleCorrect) return TITLE_NOT_CORRECT;
+  await page.waitFor(2500);
+  const positionsRowNotEmpty = await waitSelectorTextIsNotEmpty({ page }, POSITIONS_ROW);
+  if (!positionsRowNotEmpty) return false;
+  await page.waitFor(2500);
+  const positionExists = await positionsExist({ page }, POSITIONS_ROW);
+  if (!positionExists) return false;
+  return true;
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
+ * @returns {Boolean} Boolean
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Go to employee section, click on employee profiles, search and choose an employee with positions satisfied, wait until position requirements panel loads and check if the message on display is 'requirement satisfied'
+ */
+const checkPositionRequirementSatisfied = async ({ page, pendingXHR }) => {
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitForSelector(INPUT_SEARCH_EMPLOYEES);
+  await page.type(INPUT_SEARCH_EMPLOYEES, config.ID_EMPLOYEE_NUMBER_POS_SATIFIED);
+  await pendingXHR.waitForAllXhrFinished();
+
+  const foundEmployee = await waitEmployeeByParams(
+    { page },
+    ITEM_NOT_FOUND,
+    ITEM_FOUND,
+    config.ID_EMPLOYEE_NUMBER_POS_SATIFIED,
+    'No data found'
+  );
+
+  if (!foundEmployee) return EMPLOYEE_NOT_FOUND;
+
+  const isFound = await page.evaluate(
+    (ITEM_FOUND, idEmployeeNumber) => {
+      const results = document.querySelectorAll(ITEM_FOUND);
+      if (!results || !results.length) return;
+
+      for (const item of results) {
+        const idEmployeeFound = item.textContent;
+        if (idEmployeeFound.includes(idEmployeeNumber)) {
+          item.querySelector('span').click();
+          return true;
+        }
+      }
+    },
+    ITEM_FOUND,
+    config.ID_EMPLOYEE_NUMBER_POS_SATIFIED
+  );
+
+  if (!isFound) return;
+
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitFor(5000);
+  const isTitleCorrect = waitTitleText({ page }, POSITIONS_TITLE, 'Current positions');
+  if (!isTitleCorrect) return TITLE_NOT_CORRECT;
+  await page.waitFor(5000);
+  const positionsRowNotEmpty = await waitSelectorTextIsNotEmpty({ page }, POSITIONS_ROW);
+  if (!positionsRowNotEmpty) return POS_ROW_EMPTY;
+  await page.click(POSITIONS_ROW);
+  await page.waitFor(5000);
+  const positionIsSatisfied = await page.evaluate(POSITIONS_ROW => {
+    const positionRow = document.querySelector(POSITIONS_ROW);
+    const requirementText = positionRow.querySelector(
+      'div > div > div > div:nth-child(2) > div:nth-child(3) > div > div > div:nth-child(2) > p'
+    )
+      ? positionRow.querySelector(
+          'div > div > div > div:nth-child(2) > div:nth-child(3) > div > div > div:nth-child(2) > p'
+        ).textContent
+      : '';
+
+    if (requirementText === 'Requirements satisfied') return true;
+  }, POSITIONS_ROW);
+
+  return positionIsSatisfied;
+};
+
+module.exports = {
+  byLCR,
+  byName,
+  byLCRTop,
+  byNameTop,
+  byIdEmployeeNumber,
+  byIdEmployeeNumberTop,
+  loadPositionRequirements,
+  checkPositionRequirementSatisfied
+};
+</code></pre>
+        </article>
+    </section>
 
 
 

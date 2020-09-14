@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Smoke</title>
+    <title>core/scraping/scripts/secure.evercheck.com/prehire/resolvers.js</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -47,758 +47,340 @@
 
 <div id="main">
     
-    <h1 class="page-title">Smoke</h1>
-    
-
-    
-
-
-
-
-<section>
-
-
-<header>
-    
-        
-        <h2>
-        
-        Smoke
-        
-        </h2>
-        
-        
-            <div class="class-description"><p>Smoke Test class, contain methods: getTestFolderDetails, updateSuiteResultsKeys, updateGroupsByEnvironment and executeTest</p></div>
-            <hr/>
-        
-    
-</header>
-
-
-<article>
-    <div class="container-overview">
-    
-        
-
-    
-        <h2>Constructor</h2>
-    
-
-    <h4 class="name" id="Smoke"><span class="type-signature"></span>new Smoke<span class="signature">(datacenter, env, group)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
-        <strong>Parameters:</strong>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>datacenter</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>JAX|BDU</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>env</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>test|demo|production</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>group</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>auth.evercheck.com .....</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line9">line 9</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    <h4 class="name" id="executeTest"><span class="type-signature">(async) </span>executeTest<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-        <p class="summary"><p>This function executes the smoke tests, collects metrics and returns the results</p></p>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line111">line 111</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <p>smoke tests results</p>
-</div>
-
-
- 
-    </div>
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="getTestFolderDetails"><span class="type-signature">(async) </span>getTestFolderDetails<span class="signature">()</span><span class="type-signature"> &rarr; {Object}</span></h4>
-
-    
-        <p class="summary"><p>This function returns an object with two keys groupTestFolder key and globalTestFolder key</p></p>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line31">line 31</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <p>Object with the folders that contain the tests to be executed</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
- 
-    </div>
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="updateGroupsByEnvironment"><span class="type-signature">(async) </span>updateGroupsByEnvironment<span class="signature">(group)</span><span class="type-signature"> &rarr; {String}</span></h4>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
-        <strong>Parameters:</strong>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>group</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>group or groups to execute the smoke tests</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line68">line 68</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <ul>
-<li>group</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">String</span>
-
-
-    </dd>
-</dl>
- 
-    </div>
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="updateSuiteResultsKeys"><span class="type-signature">(async) </span>updateSuiteResultsKeys<span class="signature">(formatResult)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-
-    
-        <p class="summary"><p>This function returns an object with the smoke tests results but replacing http with https</p></p>
-    
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
-        <strong>Parameters:</strong>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>formatResult</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>smoke tests results</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="core_helpers_smoke_Smoke.js.html">core/helpers/smoke/Smoke.js</a>, <a href="core_helpers_smoke_Smoke.js.html#line51">line 51</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-<div class="param-desc">
-    <ul>
-<li>Object with maped smoke tests results</li>
-</ul>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
- 
-    </div>
-
-
-
-
-        
-    
-
-    
-
-    
-</article>
-
-</section>
+    <h1 class="page-title">core/scraping/scripts/secure.evercheck.com/prehire/resolvers.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module secure - prehire/resolvers
+ */
+const fs = require('fs');
+const path = require('path');
+const {
+  SELECTORS: {
+    PREHIRE_OVERVIEW_TAB,
+    WIDGET_CLEAR_TO_HIRE,
+    WIDGET_NEED_REVIEW,
+    WIDGET_WAITING_ON_CANDIDATE,
+    PREHIRE_CANDIDATES_TAB,
+    TOTAL_CANDIDATE_TABLE,
+    FIRST_ITEM_WIDGET_DAYS_IN_SYSTEM,
+    LAST_ITEM_WIDGET_DAYS_IN_SYSTEM,
+    WIDGET_TABLE_BY_ISSUE,
+    FIRST_ITEM_DATE_IN_SYSTEM_CANDIDATE_TABLE,
+    INPUT_FILTER_CANDIDATE,
+    POSITION_REQUIREMENTS,
+    HIRING_STATUS_CALCULATE,
+    REQUIREMENT_STATUS_CALCULATE,
+    CANDIDATES_TABLE
+  }
+} = require('./constants');
+const { config } = require(`../_config/${process.env.NODE_ENV}.config`);
+const {
+  convertSelectorTextToNum,
+  convertSelectorReplacedTextToNum,
+  waitStatusCalculate
+} = require('./utils');
+const { waitTextContentInSelector } = require('../../../../utils');
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
+ * @returns {number} clear to hire field
+ * @returns {number} needs review field
+ * @returns {number} waiting on candidate field
+ * @returns {number} sum of above fields
+ * @returns {number} total in candidates table
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Go to Prehire section, and check numbers in candidate totals widget.
+ */
+const candidateTotal = async ({ page, pendingXHR }) => {
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitFor(PREHIRE_CANDIDATES_TAB);
+
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitFor(PREHIRE_OVERVIEW_TAB);
+  await page.click(PREHIRE_OVERVIEW_TAB);
+
+  await pendingXHR.waitForAllXhrFinished();
+
+  const countClearToHire = await convertSelectorTextToNum({ page }, WIDGET_CLEAR_TO_HIRE);
+  const countNeedReview = await convertSelectorTextToNum({ page }, WIDGET_NEED_REVIEW);
+
+  const countWaitingOnCandidate = await convertSelectorTextToNum(
+    { page },
+    WIDGET_WAITING_ON_CANDIDATE
+  );
+
+  const sumWidgets = countClearToHire + countNeedReview + countWaitingOnCandidate;
+
+  await page.click(PREHIRE_CANDIDATES_TAB);
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitForSelector(CANDIDATES_TABLE);
+  await page.waitFor(5000);
+
+  const countTableCandidates = await convertSelectorTextToNum(
+    { page },
+    TOTAL_CANDIDATE_TABLE
+  );
+
+  return {
+    countClearToHire,
+    countNeedReview,
+    countWaitingOnCandidate,
+    sumWidgets,
+    countTableCandidates
+  };
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
+ * @returns {Boolean}
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Go to Prehire section, and check numbers in candidates by issue table widget.
+ */
+const byIssue = async ({ page, pendingXHR }) => {
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitFor(PREHIRE_OVERVIEW_TAB);
+  await page.click(PREHIRE_OVERVIEW_TAB);
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitForSelector(`${WIDGET_TABLE_BY_ISSUE} > tr:nth-child(1)`);
+
+  await waitTextContentInSelector(
+    { page },
+    `${WIDGET_TABLE_BY_ISSUE} > tr:nth-child(1)`,
+    'Elapsed license'
+  );
+
+  await page.waitFor(`${WIDGET_TABLE_BY_ISSUE} > tr:nth-child(2)`);
+  await waitTextContentInSelector(
+    { page },
+    `${WIDGET_TABLE_BY_ISSUE} > tr:nth-child(2)`,
+    'Negative license status'
+  );
+
+  await page.waitFor(`${WIDGET_TABLE_BY_ISSUE} > tr:nth-child(3)`);
+  await waitTextContentInSelector(
+    { page },
+    `${WIDGET_TABLE_BY_ISSUE} > tr:nth-child(3)`,
+    'Board/Disciplinary action'
+  );
+
+  await page.waitFor(`${WIDGET_TABLE_BY_ISSUE} > tr:nth-child(4)`);
+  await waitTextContentInSelector(
+    { page },
+    `${WIDGET_TABLE_BY_ISSUE} > tr:nth-child(4)`,
+    'Name discrepancy'
+  );
+
+  await page.waitFor(`${WIDGET_TABLE_BY_ISSUE} > tr:nth-child(5)`);
+  await waitTextContentInSelector(
+    { page },
+    `${WIDGET_TABLE_BY_ISSUE} > tr:nth-child(5)`,
+    'License expiring prior to start date'
+  );
+
+  await page.waitFor(`${WIDGET_TABLE_BY_ISSUE} > tr:nth-child(6)`);
+  await waitTextContentInSelector(
+    { page },
+    `${WIDGET_TABLE_BY_ISSUE} > tr:nth-child(6)`,
+    'Documentation should be verified'
+  );
+  return true;
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
+ * @returns {number} days in system
+ * @returns {number} days in system
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Go to Prehire section, and check numbers in candidate days in system widget.
+ */
+const daysInSystem = async ({ page, pendingXHR }) => {
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitFor(PREHIRE_OVERVIEW_TAB);
+  await page.click(PREHIRE_OVERVIEW_TAB);
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitForSelector(FIRST_ITEM_WIDGET_DAYS_IN_SYSTEM);
+  await waitTextContentInSelector({ page }, FIRST_ITEM_WIDGET_DAYS_IN_SYSTEM, 'days');
+
+  const daysInSystemFirstItem = await convertSelectorReplacedTextToNum(
+    { page },
+    FIRST_ITEM_WIDGET_DAYS_IN_SYSTEM
+  );
+
+  await page.waitFor(LAST_ITEM_WIDGET_DAYS_IN_SYSTEM);
+  await waitTextContentInSelector({ page }, LAST_ITEM_WIDGET_DAYS_IN_SYSTEM, 'days');
+
+  const daysInSystemLastItem = await convertSelectorReplacedTextToNum(
+    { page },
+    LAST_ITEM_WIDGET_DAYS_IN_SYSTEM
+  );
+
+  return { daysInSystemFirstItem, daysInSystemLastItem };
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
+ * @returns {Boolean}
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Go to Prehire section, and check candidate days in system widget is loaded.
+ */
+const canditateListLoad = async ({ page, pendingXHR }) => {
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitFor(FIRST_ITEM_DATE_IN_SYSTEM_CANDIDATE_TABLE);
+  await waitTextContentInSelector(
+    { page },
+    FIRST_ITEM_DATE_IN_SYSTEM_CANDIDATE_TABLE,
+    'days'
+  );
+  return true;
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
+ * @returns {Boolean}
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Go to Prehire section, and check candidate days in system widget is filtering.
+ */
+const canditateListFiltred = async ({ page, pendingXHR }) => {
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitFor(INPUT_FILTER_CANDIDATE);
+  await page.type(INPUT_FILTER_CANDIDATE, config.PREHIRE_SEARCH);
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitFor(FIRST_ITEM_DATE_IN_SYSTEM_CANDIDATE_TABLE);
+  await waitTextContentInSelector(
+    { page },
+    FIRST_ITEM_DATE_IN_SYSTEM_CANDIDATE_TABLE,
+    'days'
+  );
+  return true;
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
+ * @returns {Boolean}
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Go to Prehire section, and then click on candidates tab and check export button works.
+ */
+const candidateListExported = async ({ page, pendingXHR }) => {
+  let [downloadPath] = page
+    .browser()
+    .process()
+    .spawnargs.filter(item => item.includes('--user-data-dir='));
+  downloadPath = downloadPath.replace('--user-data-dir=', '');
+  await page._client.send('Page.setDownloadBehavior', {
+    behavior: 'allow',
+    downloadPath
+  });
+  await page.waitFor('#Candidates > div > div.toolbar > button');
+  await page.click('#Candidates > div > div.toolbar > button');
+  await pendingXHR.waitForAllXhrFinished();
+  while (!fs.existsSync(path.join(downloadPath, 'candidates_list.xlsx'))) {
+    // Check untill exist
+  }
+  return true;
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
+ * @returns {Boolean}
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Go to Prehire section, and then click on candidates tab and check export button works.
+ */
+const candidatePositionRequirementLoad = async ({ page, pendingXHR }) => {
+  await page.waitFor('div.view-requirements');
+  await waitStatusCalculate({ page }, POSITION_REQUIREMENTS);
+
+  return true;
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
+ * @returns {Boolean}
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Go to Prehire section, and then click on candidates tab and click on the first table entry and check position info status.
+ */
+const candidateHiringStatusCalcucate = async ({ page, pendingXHR }) => {
+  await page.waitFor(HIRING_STATUS_CALCULATE);
+  await waitStatusCalculate({ page }, HIRING_STATUS_CALCULATE);
+  return true;
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
+ * @returns {Boolean}
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Go to Prehire section, and then click on candidates tab and click on the first table entry and check position info requirements.
+ */
+const candidateRequirementStatusCalculate = async ({ page, pendingXHR }) => {
+  await page.waitFor(REQUIREMENT_STATUS_CALCULATE);
+  await waitStatusCalculate({ page }, REQUIREMENT_STATUS_CALCULATE);
+  return true;
+};
+
+/**
+ * @function
+ * @async
+ * @param {page} puppeteer-page - page
+ * @param {pendingXHR} pending-xhr-puppeteer - pending-xhr-puppeteer
+ * @returns {Boolean}
+ * @throws {TimeOut} Thrown if a selector is not rendered before a fixed time threshold.
+ * @summary Go to Prehire section, and then click on candidates tab and click on the first table entry and wait for general info start date
+ */
+const byStartDate = async ({ page, pendingXHR }) => {
+  await pendingXHR.waitForAllXhrFinished();
+  await page.waitFor('#start-date > canvas');
+  return true;
+};
+
+module.exports = {
+  candidateTotal,
+  byIssue,
+  daysInSystem,
+  canditateListLoad,
+  canditateListFiltred,
+  candidateListExported,
+  candidatePositionRequirementLoad,
+  candidateHiringStatusCalcucate,
+  candidateRequirementStatusCalculate,
+  byStartDate
+};
+</code></pre>
+        </article>
+    </section>
 
 
 
