@@ -1,32 +1,80 @@
-# This is the required part containing the build step for jsdoc
 language: node_js
-node_js:
-  - '12'
+dist: trusty
+branches:
+  only:
+      - master
+      - demo
+      - test
+
+notifications:
+  email: false
 cache:
-  yarn: true
   directories:
+    - node_modules
     - docs
-    - .cache    
-before_script: cd smoke-tests/
+    - .cache  
+sudo: required
+node_js:
+  - '12.18'
 
 script:
+  - cd smoke-tests/
   - npm install
-  - npm run doc 
+  - npm run doc
+  - cd ./core/
+  - sysctl kernel.unprivileged_userns_clone=1
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - npm install
+  - if [[ $TRAVIS_BRANCH == "master" ]]; then 
+      travis_wait 30 npm run test; 
+    elif [[ $TRAVIS_BRANCH == "demo" ]]; then 
+      travis_wait 30 npm run test:demo;
+    elif [[ $TRAVIS_BRANCH == "test" ]]; then 
+      travis_wait 30 npm run test:test;
+    fi
 
-#Here is the magic part
+
+env:
+  - GROUP=scraping.scripts.secure.evercheck.com.employee
+  - GROUP=scraping.scripts.secure.evercheck.com.licenseVerification
+  - GROUP=scraping.scripts.secure.evercheck.com.positionRequirement
+  - GROUP=scraping.scripts.secure.evercheck.com.prehire
+  - GROUP=scraping.scripts.secure.evercheck.com.reports
+
+  - GROUP=scraping.scripts.accounts.evercheck.com
+  - GROUP=scraping.scripts.education.evercheck.com
+  - GROUP=scraping.scripts.licenses.evercheck.com 
+  - GROUP=scraping.scripts.monitoring.evercheck.com
+  - GROUP=scraping.scripts.posthire.evercheck.com 
+  - GROUP=scraping.scripts.storage.evercheck.com
+  - GROUP=scraping.scripts.auth.evercheck.com
+  - GROUP=scraping.scripts.evercheck.com
+  - GROUP=scraping.scripts.lv.evercheck.com  
+  - GROUP=scraping.scripts.ocr.evercheck.com
+  - GROUP=scraping.scripts.prehire.evercheck.com
+  - GROUP=scraping.scripts.upload.evercheck.com
+  - GROUP=scraping.scripts.credentialing.evercheck.com
+  - GROUP=scraping.scripts.evercheckwallet.com
+  - GROUP=scraping.scripts.messagecenter.evercheck.com
+  - GROUP=scraping.scripts.payment.evercheck.com
+  - GROUP=scraping.scripts.workgroups.evercheck.com
+  - GROUP=scraping.scripts.user-upload.evercheck.com
+
+  #Here is the magic part
 deploy:
-    # Use Github pages deploy process
-    provider: pages
-    # Keep builded pages
-    skip-cleanup: true
-    # Directory where your generated files are located
-    local_dir: smoke-tests/docs
-    # Github security/auth token
-    github-token: $GITHUB_TOKEN
-    # Incremental commit to keep old build/files from previous deployments
-    keep-history: true
-    # Git branch on which it should deploy (master, gh-pages, foo...)
-    target_branch: gh-pages
-    on:
-      # Which branch on commit/push will trigger deployment
-      branch: test
+  # Use Github pages deploy process
+  provider: pages
+  # Keep builded pages
+  skip-cleanup: true
+  # Directory where your generated files are located
+  local_dir: smoke-tests/docs
+  # Github security/auth token
+  github-token: $GITHUB_TOKEN
+  # Incremental commit to keep old build/files from previous deployments
+  keep-history: true
+  # Git branch on which it should deploy (master, gh-pages, foo...)
+  target_branch: gh-pages
+  on:
+    # Which branch on commit/push will trigger deployment
+    branch: test
